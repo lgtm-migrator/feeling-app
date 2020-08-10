@@ -1,1 +1,3 @@
-# feeling-app
+# Feeling
+
+A smart mood tracking PWA.
