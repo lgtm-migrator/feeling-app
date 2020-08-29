@@ -128,3 +128,56 @@
   grid-area: image;
   width: calc(var(--grid-width) / 2);
 }
+
+@media only screen and (max-width: 425px) {
+  .linkText {
+    display: none;
+  }
+
+  .main {
+    --grid-width: calc(100vw - 3rem);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "title"
+      "description"
+      "image"
+      "input";
+    gap: 2.4rem 0;
+
+    margin-top: 2.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .title {
+    font-size: 3.2rem;
+    line-height: 3.7rem;
+  }
+
+  .description {
+    font-size: 1.8rem;
+  }
+
+  .image {
+    width: calc(100vw - 3rem);
+  }
+
+  .emailInput {
+    width: calc(100vw - 3rem);
+
+    border-radius: 12px;
+
+    font-size: 1.6rem;
+  }
+
+  .earlyAccessButton {
+    width: calc(100vw - 3rem);
+
+    border-radius: 12px;
+
+    margin-top: 0.8rem;
+    margin-bottom: 1.5rem;
+
+    font-size: 1.6rem;
+  }
+}
