@@ -1,7 +1,8 @@
+import React from "react"
 import Head from "next/head"
 import styles from "../styles/landing.module.css"
-import TwitterSvg from "../public/twitter.svg"
-import EmailSvg from "../public/email.svg"
+import TwitterSvg from "../../public/twitter.svg"
+import EmailSvg from "../../public/email.svg"
 
 export default function Landing() {
   return (
@@ -16,11 +17,11 @@ export default function Landing() {
         <div className={styles.links}>
           <a href="https://twitter.com/feelingapp">
             <TwitterSvg className={styles.linkLogo} />
-            <span className={styles.linkText}>Twitter</span>
+            <div className={styles.linkText}>Twitter</div>
           </a>
           <a href="mailto:hello@feeling.to">
             <EmailSvg className={styles.linkLogo} />
-            <span className={styles.linkText}>Contact</span>
+            <div className={styles.linkText}>Contact</div>
           </a>
         </div>
       </header>
