@@ -18,11 +18,11 @@
     ]
   },
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "linaria": "2.0.0-rc.1",
     "next": "9.5.2",
+    "next-linaria": "^0.9.0",
     "prettier": "^2.1.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
