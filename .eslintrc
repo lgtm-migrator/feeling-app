@@ -24,7 +24,10 @@
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
         "prettier/@typescript-eslint"
-      ]
+      ],
+      "rules": {
+        "react/react-in-jsx-scope": "off"
+      }
     },
     // JavaScript file config
     {
