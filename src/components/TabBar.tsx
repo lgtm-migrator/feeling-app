@@ -33,6 +33,7 @@ const Tab = styled.a<{ active: boolean }>`
   flex-direction: column;
   align-items: center;
   color: ${(props) => (props.active ? "inherit" : "var(--grey-color)")};
+  font-weight: ${(props) => (props.active ? 500 : 400)};
   z-index: 1;
   padding: var(--space-xs);
 
@@ -46,7 +47,6 @@ const Tab = styled.a<{ active: boolean }>`
 const TabLabel = styled.p`
   margin-top: var(--space-xxxs);
   font-size: 1.4rem;
-  font-weight: 500;
   line-height: 1.6rem;
   user-select: none;
 `
