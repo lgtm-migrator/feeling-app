@@ -1,3 +1,7 @@
+import { styled } from "linaria/react"
+
+import TopBar from "../../components/TopBar"
+
 export default function Insights(): JSX.Element {
-  return <h1>Insights</h1>
+  return <TopBar title="Insights" />
 }
