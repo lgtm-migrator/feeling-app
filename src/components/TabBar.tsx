@@ -48,6 +48,7 @@ const TabLabel = styled.p`
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.6rem;
+  user-select: none;
 `
 
 const FloatingActionButton = styled.div`
