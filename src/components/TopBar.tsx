@@ -1,8 +1,11 @@
 import Link from "next/link"
+import Router from "next/router"
 import { styled } from "linaria/react"
 
+import BackIcon from "../assets/icons/back.svg"
+
 const Container = styled.div`
-  height: 12rem;
+  height: 9.6rem;
   padding: var(--space-s) var(--space-m);
   display: flex;
   user-select: none;
@@ -35,6 +38,13 @@ const Subtitle = styled.h2`
   font-weight: bold;
 `
 
+const BackIconLink = styled.a`
+  align-self: center;
+  margin-right: var(--space-s);
+  width: 32px;
+  height: 32px;
+`
+
 const IconLink = styled.a`
   grid-area: icon;
   align-self: center;
@@ -45,26 +55,33 @@ const IconLink = styled.a`
 interface Props {
   title: string
   subtitle?: string
-  icon?: {
+  backButton?: boolean
+  rightIcon?: {
     icon: JSX.Element
     href: string
   }
 }
 
 export default function TopBar(props: Props): JSX.Element {
-  const { title, subtitle, icon } = props
+  const { title, subtitle, backButton, rightIcon } = props
 
   return (
     <Container>
       <Content>
+        {backButton && (
+          <BackIconLink onClick={() => Router.back()}>
+            <BackIcon />
+          </BackIconLink>
+        )}
+
         <Text>
           <Title>{title}</Title>
           {subtitle && <Subtitle>{subtitle}</Subtitle>}
         </Text>
 
-        {icon && (
-          <Link href={icon.href} passHref>
-            <IconLink>{icon.icon}</IconLink>
+        {rightIcon && (
+          <Link href={rightIcon.href} passHref>
+            <IconLink>{rightIcon.icon}</IconLink>
           </Link>
         )}
       </Content>
