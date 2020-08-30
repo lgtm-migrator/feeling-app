@@ -6,4 +6,13 @@ module.exports = withPlugins([withSvgr, withLinaria], {
   devIndicators: {
     autoPrerender: false,
   },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/me",
+        permanent: false,
+      },
+    ]
+  },
 })
