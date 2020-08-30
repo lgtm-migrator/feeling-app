@@ -2,4 +2,8 @@ const withPlugins = require("next-compose-plugins")
 const withLinaria = require("next-linaria")
 const withSvgr = require("next-svgr")
 
-module.exports = withPlugins([withSvgr, withLinaria])
+module.exports = withPlugins([withSvgr, withLinaria], {
+  devIndicators: {
+    autoPrerender: false,
+  },
+})
