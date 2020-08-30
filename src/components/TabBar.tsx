@@ -32,7 +32,7 @@ const Tab = styled.a<{ active: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: ${(props) => (props.active ? "inherit" : "#8b8b8b")};
+  color: ${(props) => (props.active ? "inherit" : "var(--grey-color)")};
   z-index: 1;
   padding: var(--space-xs);
 
