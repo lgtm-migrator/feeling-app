@@ -7,7 +7,7 @@ export default function Me(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Me</title>
+        <title>Me / Feeling</title>
       </Head>
 
       <TopBar
