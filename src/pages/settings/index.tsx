@@ -1,3 +1,5 @@
+import TopBar from "../../components/TopBar"
+
 export default function Settings(): JSX.Element {
-  return <h1>Settings</h1>
+  return <TopBar title="Settings" backButton={true} />
 }
