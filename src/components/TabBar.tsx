@@ -6,14 +6,14 @@ import MeIcon from "../assets/icons/me.svg"
 import InsightsIcon from "../assets/icons/insights.svg"
 import UpsetEmoji from "../assets/emojis/upset.svg"
 
-const Container = styled.div`
+const Container = styled.nav`
   width: 100%;
   display: grid;
   grid:
     ".     fab .    " 5.6rem
     "tab-1 fab tab-2" min-content
     / 1fr auto 1fr;
-  position: sticky;
+  position: fixed;
   bottom: 0;
 `
 
