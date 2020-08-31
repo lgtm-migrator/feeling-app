@@ -24,7 +24,7 @@ body {
   font-size: 62.5%;
   background: var(--background-color);
   color: var(--text-color);
-  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 a {

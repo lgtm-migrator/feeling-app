@@ -4,18 +4,19 @@ import { styled } from "linaria/react"
 import TabBar from "../components/TabBar"
 import "../styles/global.css"
 
-const Container = styled.div`
-  display: grid;
-  min-height: 100vh;
-  grid-template-rows: 1fr auto;
+const Main = styled.main`
+  /* Account for page  */
+  margin-bottom: calc(12.4rem + var(--space-m));
 `
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
-    <Container>
-      <Component {...pageProps} />
+    <>
+      <Main>
+        <Component {...pageProps} />
+      </Main>
       <TabBar />
-    </Container>
+    </>
   )
 }
 
