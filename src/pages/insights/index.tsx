@@ -1,3 +1,15 @@
+import Head from "next/head"
+
+import TopBar from "../../components/TopBar"
+
 export default function Insights(): JSX.Element {
-  return <h1>Insights</h1>
+  return (
+    <>
+      <Head>
+        <title>Insights / Feeling</title>
+      </Head>
+
+      <TopBar title="Insights" />
+    </>
+  )
 }
