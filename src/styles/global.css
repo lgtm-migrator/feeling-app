@@ -1,8 +1,30 @@
+:root {
+  --background-color: #fefefe;
+  --text-color: #1b1b1b;
+  --red-color: #f8caca;
+  --yellow-color: #f8edca;
+  --blue-color: #caeaf8;
+  --purple-color: #e4d0f2;
+  --green-color: #cef8ca;
+  --grey-color: #8b8b8b;
+
+  --space-xxxs: 4px;
+  --space-xxs: 8px;
+  --space-xs: 12px;
+  --space-s: 16px;
+  --space-m: 24px;
+  --space-l: 32px;
+  --space-xl: 40px;
+}
+
 html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 62.5%;
+  background: var(--background-color);
+  color: var(--text-color);
+  overscroll-behavior: none;
 }
 
 a {
