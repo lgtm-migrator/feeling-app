@@ -1,5 +1,5 @@
 import Head from "next/head"
-import styles from "../styles/landing.module.css"
+import styles from "../../styles/landing.module.css"
 import TwitterSvg from "../../assets/icons/twitter.svg"
 import EmailSvg from "../../assets/icons/email.svg"
 
