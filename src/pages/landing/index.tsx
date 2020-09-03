@@ -9,7 +9,6 @@ export default function Landing() {
     <div className={styles.container}>
       <Head>
         <title>Feeling</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <header className={styles.header}>
