@@ -1,7 +1,7 @@
 import Head from "next/head"
 import styles from "../styles/landing.module.css"
-import TwitterSvg from "../../public/twitter.svg"
-import EmailSvg from "../../public/email.svg"
+import TwitterSvg from "../../assets/icons/twitter.svg"
+import EmailSvg from "../../assets/icons/email.svg"
 
 export default function Landing() {
   return (
