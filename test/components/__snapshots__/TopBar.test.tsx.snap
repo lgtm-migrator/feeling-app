@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Top Bar:  matches snapshot 1`] = `
+<Container>
+  <Content>
+    <BackIconLink
+      onClick={[Function]}
+    >
+      <test-file-stub />
+    </BackIconLink>
+    <Text>
+      <Title>
+        Lorem ipsum
+      </Title>
+      <Subtitle>
+        dolor sit amet
+      </Subtitle>
+    </Text>
+    <Link
+      href="/"
+      passHref={true}
+    >
+      <IconLink>
+        <Component />
+      </IconLink>
+    </Link>
+  </Content>
+</Container>
+`;
