@@ -1,5 +1,6 @@
 import Head from "next/head"
 import styles from "../../styles/landing.module.css"
+import FeelingLogo from "../../assets/icons/logo.svg"
 import TwitterSvg from "../../assets/icons/twitter.svg"
 import EmailSvg from "../../assets/icons/email.svg"
 
@@ -12,7 +13,7 @@ export default function Landing() {
       </Head>
 
       <header className={styles.header}>
-        <img src="/logo.svg" alt="Feeling Logo" className={styles.logo} />
+        <FeelingLogo className={styles.logo} />
         <div className={styles.links}>
           <a href="https://twitter.com/feelingapp">
             <TwitterSvg className={styles.linkLogo} />
