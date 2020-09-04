@@ -32,6 +32,12 @@ a {
   text-decoration: none;
 }
 
+button,
+input {
+  font-family: inherit;
+  outline: none;
+}
+
 *,
 ::before,
 ::after {
