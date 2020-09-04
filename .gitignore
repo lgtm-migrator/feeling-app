@@ -34,3 +34,9 @@ yarn-error.log*
 
 # Linaria
 .linaria-cache
+
+# PWA
+public/sw.js
+public/sw.js.map
+public/workbox-*.js
+public/workbox-*.js.map

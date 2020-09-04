@@ -1,18 +1,35 @@
 const withPlugins = require("next-compose-plugins")
-const withLinaria = require("next-linaria")
-const withSvgr = require("next-svgr")
+const linaria = require("next-linaria")
+const svgr = require("next-svgr")
+const pwa = require("next-pwa")
 
-module.exports = withPlugins([withSvgr, withLinaria], {
-  devIndicators: {
-    autoPrerender: false,
-  },
-  async redirects() {
-    return [
+module.exports = withPlugins(
+  [
+    svgr,
+    linaria,
+    [
+      pwa,
       {
-        source: "/",
-        destination: "/me",
-        permanent: false,
+        pwa: {
+          dest: "public",
+          disable: process.env.NODE_ENV === "development",
+        },
       },
-    ]
-  },
-})
+    ],
+  ],
+  {
+    devIndicators: {
+      autoPrerender: false,
+    },
+
+    async redirects() {
+      return [
+        {
+          source: "/",
+          destination: "/me",
+          permanent: false,
+        },
+      ]
+    },
+  }
+)
