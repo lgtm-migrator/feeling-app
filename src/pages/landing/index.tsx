@@ -1,6 +1,5 @@
 import Head from "next/head"
 import { styled } from "linaria/react"
-import styles from "../../styles/landing.module.css"
 import FeelingLogo from "../../assets/icons/logo.svg"
 import TwitterSvg from "../../assets/icons/twitter.svg"
 import EmailSvg from "../../assets/icons/email.svg"
