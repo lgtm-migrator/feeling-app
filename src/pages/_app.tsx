@@ -9,7 +9,7 @@ const Main = styled.main`
   margin-bottom: calc(12.4rem + var(--space-m));
 `
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
       <Main>
@@ -19,5 +19,3 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     </>
   )
 }
-
-export default MyApp
