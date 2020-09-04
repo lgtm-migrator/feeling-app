@@ -154,11 +154,11 @@ exports[`Tab Bar:  matches tab bar snapshot in /me 1`] = `
 
 exports[`Tab Bar:  matches tab snapshot when active=false 1`] = `
 <a
-  className="t1o99zwa"
+  className="t7z4h73"
   style={
     Object {
-      "--t1o99zwa-0": "var(--grey-color)",
-      "--t1o99zwa-1": "400",
+      "--t7z4h73-0": "var(--grey-color)",
+      "--t7z4h73-1": "400",
     }
   }
 />
@@ -166,11 +166,11 @@ exports[`Tab Bar:  matches tab snapshot when active=false 1`] = `
 
 exports[`Tab Bar:  matches tab snapshot when active=true 1`] = `
 <a
-  className="t1o99zwa"
+  className="t7z4h73"
   style={
     Object {
-      "--t1o99zwa-0": "inherit",
-      "--t1o99zwa-1": "500",
+      "--t7z4h73-0": "inherit",
+      "--t7z4h73-1": "500",
     }
   }
 />
