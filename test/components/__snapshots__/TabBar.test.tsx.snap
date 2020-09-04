@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tab Bar:  matches snapshot 1`] = `
+exports[`Tab Bar:  matches tab bar snapshot in /insights 1`] = `
 <Container>
   <Link
     href="/me"
@@ -8,6 +8,82 @@ exports[`Tab Bar:  matches snapshot 1`] = `
   >
     <Tab
       active={false}
+      style={
+        Object {
+          "gridArea": "tab-1",
+        }
+      }
+    >
+      <test-file-stub />
+      <TabLabel>
+        Me
+      </TabLabel>
+    </Tab>
+  </Link>
+  <Link
+    href="/insights"
+    passHref={true}
+  >
+    <Tab
+      active={true}
+      style={
+        Object {
+          "gridArea": "tab-2",
+        }
+      }
+    >
+      <test-file-stub />
+      <TabLabel>
+        Insights
+      </TabLabel>
+    </Tab>
+  </Link>
+  <FloatingActionButton>
+    <test-file-stub />
+  </FloatingActionButton>
+  <Background>
+    <defs>
+      <mask
+        id="fab-cutout"
+      >
+        <rect
+          style={
+            Object {
+              "fill": "white",
+              "height": "7.2rem",
+              "width": "100vw",
+            }
+          }
+          x="0"
+          y="0"
+        />
+        <circle
+          cx="50%"
+          cy="-2rem"
+          fill="black"
+          r="4rem"
+        />
+      </mask>
+    </defs>
+    <rect
+      height="100%"
+      mask="url(#fab-cutout)"
+      width="100%"
+      x="0"
+      y="0"
+    />
+  </Background>
+</Container>
+`;
+
+exports[`Tab Bar:  matches tab bar snapshot in /me 1`] = `
+<Container>
+  <Link
+    href="/me"
+    passHref={true}
+  >
+    <Tab
+      active={true}
       style={
         Object {
           "gridArea": "tab-1",
@@ -74,4 +150,28 @@ exports[`Tab Bar:  matches snapshot 1`] = `
     />
   </Background>
 </Container>
+`;
+
+exports[`Tab Bar:  matches tab snapshot when active=false 1`] = `
+<a
+  className="t1o99zwa"
+  style={
+    Object {
+      "--t1o99zwa-0": "var(--grey-color)",
+      "--t1o99zwa-1": "400",
+    }
+  }
+/>
+`;
+
+exports[`Tab Bar:  matches tab snapshot when active=true 1`] = `
+<a
+  className="t1o99zwa"
+  style={
+    Object {
+      "--t1o99zwa-0": "inherit",
+      "--t1o99zwa-1": "500",
+    }
+  }
+/>
 `;

@@ -4,6 +4,7 @@ exports[`Top Bar:  matches snapshot 1`] = `
 <Container>
   <Content>
     <BackIconLink
+      data-test="top-bar-back-icon"
       onClick={[Function]}
     >
       <test-file-stub />
