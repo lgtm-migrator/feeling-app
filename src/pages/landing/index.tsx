@@ -202,7 +202,11 @@ function Header() {
     <HeaderContainer>
       <FeelingLogo />
       <Links>
-        <Link href="https://twitter.com/feelingapp">
+        <Link
+          href="https://twitter.com/feelingapp"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <TwitterSvg />
           <LinkText>Twitter</LinkText>
         </Link>
