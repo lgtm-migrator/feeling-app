@@ -108,7 +108,6 @@ const Title = styled.div`
 `
 
 const Input = styled.div`
-  --input-padding: 15px;
   grid-area: input;
   place-self: center;
 `
@@ -116,7 +115,7 @@ const Input = styled.div`
 const EmailInput = styled.input`
   width: var(--grid-width);
 
-  padding: var(--input-padding);
+  padding: var(--space-s);
 
   font-size: 1.6rem;
 
@@ -139,7 +138,7 @@ const EarlyAccessButton = styled.button`
   width: var(--grid-width);
 
   margin-top: var(--space-xxs);
-  padding: var(--input-padding);
+  padding: var(--space-s);
 
   font-size: 1.6rem;
 
