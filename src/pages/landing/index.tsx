@@ -108,7 +108,6 @@ const Title = styled.div`
 `
 
 const Input = styled.div`
-  --input-border-radius: 12px;
   --input-padding: 15px;
   grid-area: input;
   place-self: center;
@@ -125,14 +124,12 @@ const EmailInput = styled.input`
   background: #f7f7f7;
 
   border: 2px solid #ebebeb;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
 
   @media (min-width: 800px) {
     width: 320px;
 
-    border-radius: 0;
-    border-top-left-radius: var(--input-border-radius);
-    border-bottom-left-radius: var(--input-border-radius);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
 
     font-size: 1.8rem;
   }
@@ -150,7 +147,7 @@ const EarlyAccessButton = styled.button`
   background: var(--text-color);
 
   border: 2px solid var(--text-color);
-  border-radius: 12px;
+  border-radius: var(--border-radius);
 
   @media (min-width: 800px) {
     width: 180px;
@@ -159,9 +156,7 @@ const EarlyAccessButton = styled.button`
 
     font-size: 1.8rem;
 
-    border-radius: 0;
-    border-top-right-radius: var(--input-border-radius);
-    border-bottom-right-radius: var(--input-border-radius);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
   }
 `
 
