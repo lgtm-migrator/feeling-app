@@ -1,18 +1,18 @@
 import { shallow } from "enzyme"
 import TopBar from "../../src/components/TopBar"
-import ComponentStub from "../__mocks__/ComponentStub"
+import { ComponentStub } from "../__mocks__/ComponentStub"
 import Router from "next/router"
 
 // jest.mock("next/router")
 // Router.mockImplementation(() => 'Router')
-jest.mock('next/router', () => ({
+jest.mock("next/router", () => ({
   back: jest.fn()
-}));
+}))
 
 describe("Top Bar: ", () => {
   afterEach(() => {
-    jest.clearAllMocks();
-  });
+    jest.clearAllMocks()
+  })
 
   it("matches snapshot", () => {
     const wrapper = shallow(
