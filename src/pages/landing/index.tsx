@@ -77,7 +77,6 @@ const MainContainer = styled.main`
       "title title"
       "input input"
       "description image";
-    /* gap: 0; */
 
     justify-items: center;
   }
