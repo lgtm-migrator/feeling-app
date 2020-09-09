@@ -21,7 +21,7 @@ jobs:
           npm install
           npm build
           npm test -- --coverage
-ó
+
       - name: run Lighthouse CI
         uses: codecov/codecov-action@v1
         with:
