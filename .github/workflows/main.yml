@@ -16,6 +16,9 @@ jobs:
         with:
           node-version: '12'
 
+      env:
+        LHCI_GITHUB_APP_TOKEN : ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
       - name: install, build, test
         run: |
           npm install
