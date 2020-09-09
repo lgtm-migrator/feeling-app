@@ -1,6 +1,6 @@
 import { shallow } from "enzyme"
 import TopBar from "../../src/components/TopBar"
-import { ComponentStub } from "../__mocks__/ComponentStub"
+import ComponentStub from "../__mocks__/ComponentStub"
 import Router from "next/router"
 
 // jest.mock("next/router")

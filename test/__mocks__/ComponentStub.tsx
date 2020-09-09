@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react"
 
-export const ComponentStub = (): ReactElement => {
+export default function ComponentStub(): ReactElement {
   return <></>
 }
