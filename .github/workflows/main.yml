@@ -19,7 +19,7 @@ jobs:
       - name: install, build, test
         run: |
           npm install
-          npm build
+          npm run build
           npm test -- --coverage
 
       - name: Unit test coverage
@@ -29,6 +29,6 @@ jobs:
 
       - name: run Lighthouse CI
         run: |
-          npm run build-prod
+          npm run export
           npm install -g @lhci/cli@0.4.x
           lhci autorun
