@@ -16,9 +16,6 @@ jobs:
         with:
           node-version: '12'
 
-      env:
-        LHCI_GITHUB_APP_TOKEN : ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-
       - name: install, build, test
         run: |
           npm install
@@ -31,6 +28,8 @@ jobs:
           file: ./coverage/lcov.info
 
       - name: run Lighthouse CI
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
         run: |
           npm run export
           npm install -g @lhci/cli@0.4.x
