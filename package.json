@@ -5,6 +5,7 @@
     "dev": "next dev",
     "dev-network": "next dev --hostname 0.0.0.0",
     "build": "next build",
+    "build-prod": "next export",
     "start": "next start",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "test": "jest"
