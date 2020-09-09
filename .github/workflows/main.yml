@@ -28,6 +28,6 @@ jobs:
           file: ./coverage/lcov.info
 
       - name: run Lighthouse CI
-          run: |
-            npm install -g @lhci/cli@0.4.x
-            lhci autorun
+        run: |
+          npm install -g @lhci/cli@0.4.x
+          lhci autorun
