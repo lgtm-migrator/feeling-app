@@ -2,10 +2,7 @@
   "extends": [
     "config:base"
   ],
-  "packageRules": [
-    {
-      "updateTypes": ["patch"],
-      "automerge": true
-    }
-  ]
+  "patch": {
+    "automerge": true
+  }
 }
