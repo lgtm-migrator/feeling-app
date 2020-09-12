@@ -12,13 +12,28 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
-      - run: npm install
-      - run: npm build
-      - run: npm test -- --coverage
 
-      - uses: codecov/codecov-action@v1
+      - name: install, build, test
+        run: |
+          npm install
+          npm run build
+          npm test -- --coverage
+
+      - name: Unit test coverage
+        uses: codecov/codecov-action@v1
         with:
           file: ./coverage/lcov.info
+
+      - name: run Lighthouse CI
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+        run: |
+          npm run export
+          npm install -g @lhci/cli@0.4.x
+          lhci autorun
