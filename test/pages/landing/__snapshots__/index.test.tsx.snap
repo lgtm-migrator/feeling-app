@@ -39,17 +39,3 @@ exports[`Landing:  matches Landing snapshot 1`] = `
   </Container>
 </Fragment>
 `;
-
-exports[`Landing:  matches snapshot 1`] = `
-<Fragment>
-  <Head>
-    <title>
-      Feeling
-    </title>
-  </Head>
-  <Container>
-    <Header />
-    <Main />
-  </Container>
-</Fragment>
-`;

@@ -1,9 +1,14 @@
 import { shallow } from "enzyme"
-import Landing, { Header } from "../../../src/pages/landing"
+import Landing, { Header, Main } from "../../../src/pages/landing"
 
 describe("Landing: ", () => {
   it("matches Landing snapshot", () => {
     const wrapper = shallow(<Landing/>)
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it("matches Main snapshot", () => {
+    const wrapper = shallow(<Main/>)
     expect(wrapper).toMatchSnapshot()
   })
 

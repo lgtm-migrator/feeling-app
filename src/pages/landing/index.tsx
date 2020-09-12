@@ -212,7 +212,7 @@ export function Header() {
   )
 }
 
-function Main() {
+export function Main() {
   return (
     <MainContainer>
       <Title>Your feelings are about to get a whole lot smarter 😊</Title>
