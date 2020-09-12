@@ -17,7 +17,7 @@ describe("Tab Bar: ", () => {
   })
 
   each([true, false]).it('matches tab snapshot when active=%s', isActive => {
-    const wrapper = shallow(<Tab active={isActive}/>)
+    const wrapper = shallow(<Tab active={isActive} />)
     expect(wrapper).toMatchSnapshot()
   })
 })

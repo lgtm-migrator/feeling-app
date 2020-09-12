@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Me:  matches snapshot 1`] = `
+<Fragment>
+  <Head>
+    <title>
+      Me / Feeling
+    </title>
+  </Head>
+  <TopBar
+    rightIcon={
+      Object {
+        "href": "/settings",
+        "icon": <test-file-stub />,
+      }
+    }
+    subtitle="How are you feeling today?"
+    title="Hey Michael,"
+  />
+</Fragment>
+`;

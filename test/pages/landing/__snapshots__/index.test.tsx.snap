@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing:  matches snapshot 1`] = `
+<Fragment>
+  <Head>
+    <title>
+      Feeling
+    </title>
+  </Head>
+  <Container>
+    <Header />
+    <Main />
+  </Container>
+</Fragment>
+`;
