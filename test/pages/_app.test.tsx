@@ -12,14 +12,14 @@ describe("App: ", () => {
     jest.clearAllMocks()
   })
 
-  it("matches snapshot when is on landing page", () => {
+  it("matches snapshot when on landing page", () => {
     Utils.getDisplayName.mockImplementation(() => "Landing")
 
     const wrapper = shallow(<MyApp Component={ComponentStub}/>)
     expect(wrapper).toMatchSnapshot()
   })
 
-  it("matches snapshot when is on the App", () => {
+  it("matches snapshot when on App", () => {
     Utils.getDisplayName.mockImplementation(() => "App")
 
     const wrapper = shallow(<MyApp Component={ComponentStub}/>)
