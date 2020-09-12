@@ -1,5 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Landing:  matches Header snapshot 1`] = `
+<HeaderContainer>
+  <test-file-stub />
+  <Links>
+    <Link
+      href="https://twitter.com/feelingapp"
+      rel="noreferrer noopener"
+      target="_blank"
+    >
+      <test-file-stub />
+      <LinkText>
+        Twitter
+      </LinkText>
+    </Link>
+    <Link
+      href="mailto:hello@feeling.to"
+    >
+      <test-file-stub />
+      <LinkText>
+        Contact
+      </LinkText>
+    </Link>
+  </Links>
+</HeaderContainer>
+`;
+
+exports[`Landing:  matches Landing snapshot 1`] = `
+<Fragment>
+  <Head>
+    <title>
+      Feeling
+    </title>
+  </Head>
+  <Container>
+    <Header />
+    <Main />
+  </Container>
+</Fragment>
+`;
+
 exports[`Landing:  matches snapshot 1`] = `
 <Fragment>
   <Head>

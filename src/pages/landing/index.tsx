@@ -190,7 +190,7 @@ const PhoneImage = styled.img`
   }
 `
 
-function Header() {
+export function Header() {
   return (
     <HeaderContainer>
       <FeelingLogo />
