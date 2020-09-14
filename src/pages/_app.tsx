@@ -5,8 +5,12 @@ import TabBar from "../components/TabBar"
 import "../styles/global.css"
 
 const Main = styled.main`
-  /* Account for page  */
-  margin-bottom: calc(12.4rem + var(--space-m));
+  --tab-bar-height: calc(12.4rem + var(--space-m));
+
+  min-height: calc(100vh - var(--tab-bar-height));
+  margin-bottom: var(--tab-bar-height);
+  display: flex;
+  flex-direction: column;
 `
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
