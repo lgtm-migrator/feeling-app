@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Insights:  matches snapshot 1`] = `
+<Fragment>
+  <Head>
+    <title>
+      Insights / Feeling
+    </title>
+  </Head>
+  <TopBar
+    title="Insights"
+  />
+</Fragment>
+`;
