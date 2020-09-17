@@ -15,5 +15,6 @@ module.exports = {
     "\\.(gif|ttf|eot|svg|png)$": "<rootDir>/test/__mocks__/fileMock.js"
   },
   setupFilesAfterEnv: ["<rootDir>/setupTests.js"],
-  snapshotSerializers: ["enzyme-to-json/serializer"]
+  snapshotSerializers: ["enzyme-to-json/serializer"],
+  collectCoverageFrom: ["src/**/*.{ts,tsx}"]
 }
