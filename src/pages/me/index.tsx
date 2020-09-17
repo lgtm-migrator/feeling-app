@@ -8,6 +8,7 @@ export default function Me(): JSX.Element {
     <>
       <Head>
         <title>Me / Feeling</title>
+        <meta name="description" content="Track your daily feelings"></meta>
       </Head>
 
       <TopBar

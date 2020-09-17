@@ -216,6 +216,10 @@ export function Main() {
   return (
     <MainContainer>
       <Title>Your feelings are about to get a whole lot smarter 😊</Title>
+      <meta
+        name="description"
+        content="The Feeling app - Your feelings are about to get a whole lot smarter"
+      ></meta>
       <Input>
         <EmailInput type="text" placeholder="Your email" />
         <EarlyAccessButton>Get Early Access</EarlyAccessButton>

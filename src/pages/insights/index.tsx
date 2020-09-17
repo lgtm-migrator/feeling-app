@@ -7,6 +7,10 @@ export default function Insights(): JSX.Element {
     <>
       <Head>
         <title>Insights / Feeling</title>
+        <meta
+          name="description"
+          content="Get insights into your mood trends"
+        ></meta>
       </Head>
 
       <TopBar title="Insights" />
