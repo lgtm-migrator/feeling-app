@@ -45,6 +45,10 @@ exports[`Landing:  matches Main snapshot 1`] = `
   <Title>
     Your feelings are about to get a whole lot smarter 😊
   </Title>
+  <meta
+    content="The Feeling app - Your feelings are about to get a whole lot smarter"
+    name="description"
+  />
   <Input>
     <EmailInput
       placeholder="Your email"

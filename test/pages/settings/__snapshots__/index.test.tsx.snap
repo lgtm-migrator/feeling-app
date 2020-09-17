@@ -6,6 +6,10 @@ exports[`Settings:  matches snapshot 1`] = `
     <title>
       Settings / Feeling
     </title>
+    <meta
+      content="Configure your preferences for the Feeling app"
+      name="description"
+    />
   </Head>
   <TopBar
     backButton={true}
