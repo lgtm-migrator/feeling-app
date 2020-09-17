@@ -15,8 +15,6 @@ export default function Day(): JSX.Element {
   const router = useRouter()
   const queryDate = router.query.date as string
 
-  if (!queryDate) router.push("/me")
-
   const date = parse(queryDate, "dd-MM-yyyy", new Date())
   const formattedDate = format(date, "do MMMM yyyy")
 
