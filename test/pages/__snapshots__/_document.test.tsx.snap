@@ -31,6 +31,10 @@ exports[`Document:  matches snapshot 1`] = `
       href="/manifest.json"
       rel="manifest"
     />
+    <meta
+      content="#fefefe"
+      name="theme-color"
+    />
   </Head>
   <body>
     <Main />
