@@ -27,6 +27,10 @@ exports[`Document:  matches snapshot 1`] = `
       href="/icons/safari-pinned-tab.svg"
       rel="mask-icon"
     />
+    <link
+      href="/manifest.json"
+      rel="manifest"
+    />
   </Head>
   <body>
     <Main />
