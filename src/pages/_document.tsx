@@ -38,6 +38,7 @@ export default class MyDocument extends Document {
             href="/icons/safari-pinned-tab.svg"
             color="#caeaf8"
           />
+          <link rel="manifest" href="/manifest.json" />
         </Head>
 
         <body>
