@@ -5,6 +5,9 @@ module.exports = {
     },
     assert: {
       preset: "lighthouse:recommended",
+      assertions: {
+        "redirects-http": "off",
+      },
     },
   },
 }

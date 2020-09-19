@@ -5,7 +5,6 @@ export default function Home(): JSX.Element {
     <>
       <Head>
         <title>Hello, World!</title>
-        <meta name="description" content="Hello, World!"></meta>
       </Head>
       <h1>Hello, World!</h1>
     </>
