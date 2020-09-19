@@ -59,6 +59,7 @@ interface Props {
   rightIcon?: {
     icon: JSX.Element
     href: string
+    label: string
   }
 }
 
@@ -69,8 +70,11 @@ export default function TopBar(props: Props): JSX.Element {
     <Container>
       <Content>
         {backButton && (
-          <BackIconLink onClick={() => Router.back()} data-test="top-bar-back-icon">
-            <BackIcon/>
+          <BackIconLink
+            onClick={() => Router.back()}
+            data-test="top-bar-back-icon"
+          >
+            <BackIcon aria-label="Back" />
           </BackIconLink>
         )}
 
@@ -81,7 +85,7 @@ export default function TopBar(props: Props): JSX.Element {
 
         {rightIcon && (
           <Link href={rightIcon.href} passHref>
-            <IconLink>{rightIcon.icon}</IconLink>
+            <IconLink aria-label={rightIcon.label}>{rightIcon.icon}</IconLink>
           </Link>
         )}
       </Content>

@@ -17,6 +17,7 @@ export default function Me(): JSX.Element {
         rightIcon={{
           icon: <SettingsIcon />,
           href: "/settings",
+          label: "Settings",
         }}
       />
     </>

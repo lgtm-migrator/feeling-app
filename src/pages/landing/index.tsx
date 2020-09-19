@@ -199,11 +199,12 @@ export function Header() {
           href="https://twitter.com/feelingapp"
           target="_blank"
           rel="noreferrer noopener"
+          aria-label="Twitter"
         >
           <TwitterSvg />
           <LinkText>Twitter</LinkText>
         </Link>
-        <Link href="mailto:hello@feeling.to">
+        <Link href="mailto:hello@feeling.to" aria-label="Contact us">
           <EmailSvg />
           <LinkText>Contact</LinkText>
         </Link>
@@ -221,7 +222,7 @@ export function Main() {
         content="The Feeling app - Your feelings are about to get a whole lot smarter"
       ></meta>
       <Input>
-        <EmailInput type="text" placeholder="Your email" />
+        <EmailInput type="text" placeholder="Your email" aria-label="Email" />
         <EarlyAccessButton>Get Early Access</EarlyAccessButton>
       </Input>
 

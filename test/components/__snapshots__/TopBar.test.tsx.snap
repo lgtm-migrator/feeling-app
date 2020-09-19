@@ -7,7 +7,9 @@ exports[`Top Bar:  matches snapshot 1`] = `
       data-test="top-bar-back-icon"
       onClick={[Function]}
     >
-      <test-file-stub />
+      <test-file-stub
+        aria-label="Back"
+      />
     </BackIconLink>
     <Text>
       <Title>
