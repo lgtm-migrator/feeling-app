@@ -6,10 +6,6 @@ exports[`Insights:  matches snapshot 1`] = `
     <title>
       Insights / Feeling
     </title>
-    <meta
-      content="Get insights into your mood trends"
-      name="description"
-    />
   </Head>
   <TopBar
     title="Insights"

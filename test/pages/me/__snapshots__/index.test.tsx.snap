@@ -6,10 +6,6 @@ exports[`Me:  matches snapshot 1`] = `
     <title>
       Me / Feeling
     </title>
-    <meta
-      content="Track your daily feelings"
-      name="description"
-    />
   </Head>
   <TopBar
     rightIcon={

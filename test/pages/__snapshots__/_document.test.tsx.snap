@@ -35,6 +35,10 @@ exports[`Document:  matches snapshot 1`] = `
       content="#fefefe"
       name="theme-color"
     />
+    <meta
+      content="The Feeling app - Your feelings are about to get a whole lot smarter"
+      name="description"
+    />
   </Head>
   <body>
     <Main />

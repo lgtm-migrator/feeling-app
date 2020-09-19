@@ -7,10 +7,6 @@ export default function Settings(): JSX.Element {
     <>
       <Head>
         <title>Settings / Feeling</title>
-        <meta
-          name="description"
-          content="Configure your preferences for the Feeling app"
-        ></meta>
       </Head>
 
       <TopBar title="Settings" backButton={true} />
