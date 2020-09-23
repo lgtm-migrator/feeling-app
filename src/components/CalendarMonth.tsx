@@ -7,11 +7,22 @@ import { CSSProperties } from "react"
 
 import CalendarDay from "./CalendarDay"
 import { getDateFromIndex } from "../utils/dates"
-import { Emotion } from "../utils/emotions"
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
+
+  &:last-child {
+    :after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: calc(-1 * var(--tab-bar-height));
+      height: var(--tab-bar-height);
+      width: 100%;
+    }
+  }
 `
 
 const Content = styled.div`
