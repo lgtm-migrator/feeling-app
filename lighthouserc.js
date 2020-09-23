@@ -5,9 +5,9 @@ module.exports = {
     },
     assert: {
       preset: "lighthouse:recommended",
-    },
-    settings: {
-      skipAudits: ["redirects-http"],
+      assertions: {
+        "unused-javascript": ["error", { maxLength: 4 }],
+      },
     },
   },
 }
