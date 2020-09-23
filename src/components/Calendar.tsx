@@ -1,6 +1,6 @@
-import VirtualList from "react-tiny-virtual-list"
 import AutoSizer from "react-virtualized-auto-sizer"
 import getWeeksInMonth from "date-fns/getWeeksInMonth"
+import { VariableSizeList } from "react-window"
 
 import Month from "./CalendarMonth"
 import { getDateFromIndex, getIndexFromDate, MAX_DATE } from "../utils/dates"
@@ -17,52 +17,43 @@ function calculateMonthHeight(index: number): number {
   const date = getDateFromIndex(index)
   const weeks = getWeeksInMonth(date)
 
-  const viewportWidth = document.documentElement.clientWidth
+  const viewportWidth = Math.min(document.documentElement.clientWidth, 600)
   const dayHeight = (viewportWidth - 8 - 8 - 6 * 4) / 7
   const daysHeight = dayHeight * weeks
-  const gridGap = 4 * (weeks + 2)
+  const gridGap = 8 * (weeks + 1)
 
   return monthTitle + weekDayTitle + marginBottom + daysHeight + gridGap
 }
 
 export default function Calendar(): JSX.Element {
-  const virtualListRef = useRef<VirtualList>()
+  const listRef = useRef<VariableSizeList>()
 
   useEffect(() => {
-    let resizeTimer
+    // Scroll to the current month
+    listRef.current?.scrollToItem(getIndexFromDate(new Date()))
 
-    function handleResize() {
-      clearTimeout(resizeTimer)
+    // Rerender list if window is resized
+    const rerenderCalendar = () => listRef.current?.resetAfterIndex(0)
+    window.addEventListener("resize", rerenderCalendar)
 
-      resizeTimer = setTimeout(function () {
-        if (virtualListRef.current) {
-          const index = getIndexFromDate(new Date())
-          virtualListRef.current.recomputeSizes(index)
-        }
-      }, 250)
-    }
-
-    window.addEventListener("resize", handleResize)
-
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+    return () => window.removeEventListener("resize", rerenderCalendar)
+  }, [listRef.current])
 
   return (
-    <AutoSizer defaultWidth="100%" disableWidth={true}>
-      {({ height }) => (
-        <VirtualList
-          ref={virtualListRef}
+    <AutoSizer>
+      {({ width, height }) => (
+        <VariableSizeList
           itemCount={getIndexFromDate(MAX_DATE)}
-          renderItem={({ index, style }) => (
+          itemSize={calculateMonthHeight}
+          height={height}
+          width={width}
+          ref={listRef}
+          overscanCount={3}
+        >
+          {({ index, style }) => (
             <Month index={index} key={index} style={style} />
           )}
-          itemSize={calculateMonthHeight}
-          scrollToIndex={getIndexFromDate(new Date())}
-          scrollToAlignment="start"
-          overscanCount={10}
-          height={height}
-          width="100%"
-        />
+        </VariableSizeList>
       )}
     </AutoSizer>
   )

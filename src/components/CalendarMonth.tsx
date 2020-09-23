@@ -3,11 +3,11 @@ import format from "date-fns/format"
 import getDaysInMonth from "date-fns/getDaysInMonth"
 import getISODay from "date-fns/getISODay"
 import { styled } from "linaria/react"
+import { CSSProperties } from "react"
 
 import CalendarDay from "./CalendarDay"
-import { Emotion } from "../utils/emotions"
 import { getDateFromIndex } from "../utils/dates"
-import { ItemStyle } from "react-tiny-virtual-list"
+import { Emotion } from "../utils/emotions"
 
 const Container = styled.div`
   display: flex;
@@ -22,6 +22,8 @@ const Content = styled.div`
   justify-items: center;
   user-select: none;
   max-width: 600px;
+  min-width: 270px;
+  width: 100%;
 `
 
 const MonthTitle = styled.p`
@@ -30,6 +32,7 @@ const MonthTitle = styled.p`
   margin-bottom: var(--space-xs);
   color: var(--grey-color);
   font-size: 1.6rem;
+  line-height: 1;
 `
 
 const WeekDayTitle = styled.div`
@@ -37,11 +40,12 @@ const WeekDayTitle = styled.div`
   color: var(--grey-color);
   font-size: 1.2rem;
   text-align: center;
+  line-height: 1;
 `
 
 interface Props {
   index: number
-  style: ItemStyle
+  style: CSSProperties
 }
 
 export default function Month(props: Props): JSX.Element {
