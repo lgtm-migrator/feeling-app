@@ -47,9 +47,7 @@ interface Props {
 export default function Month(props: Props): JSX.Element {
   const date = getDateFromIndex(props.index)
   const numberOfDays = getDaysInMonth(date)
-  const day = getISODay(date)
-
-  const array = Object.values(Emotion)
+  const day = getISODay(date) % 7
 
   return (
     <Container style={props.style}>
