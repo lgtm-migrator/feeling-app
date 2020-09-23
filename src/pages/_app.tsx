@@ -1,4 +1,5 @@
 import { AppProps } from "next/app"
+import { getDisplayName } from "next/dist/next-server/lib/utils"
 import { styled } from "linaria/react"
 
 import TabBar from "../components/TabBar"
@@ -10,15 +11,19 @@ const Main = styled.main`
   flex-direction: column;
 `
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
-      <Main>
-        <Component {...pageProps} />
-      </Main>
-      <TabBar />
+      {getDisplayName(Component) !== "Landing" ? (
+        <Main>
+          <Component {...pageProps} />
+          <TabBar />
+        </Main>
+      ) : (
+        <main>
+          <Component {...pageProps} />
+        </main>
+      )}
     </>
   )
 }
-
-export default MyApp

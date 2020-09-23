@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Settings:  matches snapshot 1`] = `
+<Fragment>
+  <Head>
+    <title>
+      Settings / Feeling
+    </title>
+  </Head>
+  <TopBar
+    backButton={true}
+    title="Settings"
+  />
+</Fragment>
+`;

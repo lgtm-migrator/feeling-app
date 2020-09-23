@@ -74,7 +74,10 @@ export default function TopBar(props: Props): JSX.Element {
     <Container>
       <Content>
         {backButton && (
-          <BackIconLink onClick={() => Router.back()}>
+          <BackIconLink
+            onClick={() => Router.back()}
+            data-test="top-bar-back-icon"
+          >
             <BackIcon />
           </BackIconLink>
         )}

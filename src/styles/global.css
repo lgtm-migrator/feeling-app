@@ -17,6 +17,8 @@
   --space-l: 32px;
   --space-xl: 40px;
 
+  --border-radius: 12px;
+
   /* Generated after tab bar is rendered */
   --tab-bar-height: 0px;
 }
@@ -34,6 +36,12 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button,
+input {
+  font-family: inherit;
+  outline: none;
 }
 
 *,

@@ -28,7 +28,7 @@ const Background = styled.svg`
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.1));
 `
 
-const Tab = styled.a<{ active: boolean }>`
+export const Tab = styled.a<{ active: boolean }>`
   flex: 1;
   display: flex;
   flex-direction: column;
