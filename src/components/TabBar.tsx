@@ -1,11 +1,11 @@
 import Link from "next/link"
+import { useLayoutEffect, useRef } from "react"
 import { styled } from "linaria/react"
 import { useRouter } from "next/router"
 
 import MeIcon from "../assets/icons/me.svg"
 import InsightsIcon from "../assets/icons/insights.svg"
 import UpsetEmoji from "../assets/emojis/upset.svg"
-import { useLayoutEffect, useRef } from "react"
 
 const Container = styled.nav`
   width: 100%;
@@ -75,7 +75,6 @@ export default function TabBar(): JSX.Element {
 
   useLayoutEffect(() => {
     if (tabBarRef.current) {
-      console.log(tabBarRef.current.clientHeight)
       document.documentElement.style.setProperty(
         "--tab-bar-height",
         tabBarRef.current.clientHeight + "px"
