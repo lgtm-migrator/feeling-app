@@ -5,8 +5,6 @@ import TabBar from "../components/TabBar"
 import "../styles/global.css"
 
 const Main = styled.main`
-  --tab-bar-height: calc(12.4rem + var(--space-m));
-
   min-height: 100vh;
   display: flex;
   flex-direction: column;

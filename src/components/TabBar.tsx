@@ -5,6 +5,7 @@ import { useRouter } from "next/router"
 import MeIcon from "../assets/icons/me.svg"
 import InsightsIcon from "../assets/icons/insights.svg"
 import UpsetEmoji from "../assets/emojis/upset.svg"
+import { useLayoutEffect, useRef } from "react"
 
 const Container = styled.nav`
   width: 100%;
@@ -70,9 +71,20 @@ const FloatingActionButton = styled.div`
 
 export default function TabBar(): JSX.Element {
   const { pathname } = useRouter()
+  const tabBarRef = useRef(null)
+
+  useLayoutEffect(() => {
+    if (tabBarRef.current) {
+      console.log(tabBarRef.current.clientHeight)
+      document.documentElement.style.setProperty(
+        "--tab-bar-height",
+        tabBarRef.current.clientHeight + "px"
+      )
+    }
+  }, [tabBarRef])
 
   return (
-    <Container>
+    <Container ref={tabBarRef}>
       <Link href="/me" passHref>
         <Tab active={pathname.startsWith("/me")} style={{ gridArea: "tab-1" }}>
           <MeIcon />

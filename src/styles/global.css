@@ -16,6 +16,9 @@
   --space-m: 24px;
   --space-l: 32px;
   --space-xl: 40px;
+
+  /* Generated after tab bar is rendered */
+  --tab-bar-height: 0px;
 }
 
 html,
