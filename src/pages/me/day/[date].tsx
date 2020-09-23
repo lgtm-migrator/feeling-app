@@ -5,6 +5,7 @@ import { styled } from "linaria/react"
 import { useRouter } from "next/router"
 
 import TopBar from "../../../components/TopBar"
+import { useEffect } from "react"
 
 const Container = styled.div`
   padding: var(--space-xxs) var(--space-xxs) 0;
@@ -15,8 +16,15 @@ export default function Day(): JSX.Element {
   const router = useRouter()
   const queryDate = router.query.date as string
 
+  // Redirect to /me if no date is provided
+  useEffect(() => {
+    if (!queryDate) {
+      router.push("/me")
+    }
+  }, [])
+
   if (!queryDate) {
-    router.push("/me")
+    return null
   }
 
   const date = parse(queryDate, "dd-MM-yyyy", new Date())
