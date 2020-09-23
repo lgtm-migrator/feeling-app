@@ -17,5 +17,8 @@ exports[`Me:  matches snapshot 1`] = `
     subtitle="How are you feeling today?"
     title="Hey Michael,"
   />
+  <Container>
+    <Calendar />
+  </Container>
 </Fragment>
 `;
