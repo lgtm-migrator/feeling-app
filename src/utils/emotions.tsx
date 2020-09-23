@@ -29,18 +29,18 @@ export function getEmotionColor(emotion: Emotion): string {
   }
 }
 
-export function getEmojiSvg(emotion: Emotion): React.FunctionComponent {
+export function renderEmoji(emotion: Emotion): JSX.Element {
   switch (emotion) {
     case Emotion.ANGRY:
-      return AngryIcon
+      return <AngryIcon />
     case Emotion.UPSET:
-      return UpsetIcon
+      return <UpsetIcon />
     case Emotion.UNSURE:
-      return UnsureIcon
+      return <UnsureIcon />
     case Emotion.GREAT:
-      return GreatIcon
+      return <GreatIcon />
     case Emotion.AMAZING:
-      return AmazingIcon
+      return <AmazingIcon />
     default:
       return undefined
   }

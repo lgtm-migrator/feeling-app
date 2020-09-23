@@ -3,7 +3,7 @@ import format from "date-fns/format"
 import isToday from "date-fns/isToday"
 import { styled } from "linaria/react"
 
-import { Emotion, getEmotionColor, getEmojiSvg } from "../utils/emotions"
+import { Emotion, getEmotionColor, renderEmoji } from "../utils/emotions"
 
 const Container = styled.a`
   display: grid;
@@ -13,7 +13,7 @@ const Container = styled.a`
   width: 100%;
 `
 
-const Background = styled.div<{ backgroundColor: string; isToday: boolean }>`
+const Background = styled.div<{ backgroundColor: string; isToday?: boolean }>`
   grid-area: content;
   border-radius: 12px;
   background-color: ${(props) => props.backgroundColor};
@@ -51,9 +51,13 @@ interface Props {
 }
 
 export default function CalendarDay(props: Props): JSX.Element {
-  const color = getEmotionColor(props.emotion)
-  const Emoji = getEmojiSvg(props.emotion)
-  const isBlank = props.blank === true
+  if (props.blank) {
+    return (
+      <Container as="div">
+        <Background backgroundColor="transparent" />
+      </Container>
+    )
+  }
 
   return (
     <Link
@@ -61,15 +65,15 @@ export default function CalendarDay(props: Props): JSX.Element {
       as={"/me/day/" + format(props.date, "dd-MM-yyyy")}
       passHref={true}
     >
-      <Container aria-hidden={isBlank} tabIndex={isBlank ? -1 : 0}>
+      <Container>
         <Background
-          backgroundColor={isBlank ? "transparent" : color}
+          backgroundColor={getEmotionColor(props.emotion)}
           isToday={isToday(props.date)}
         />
-        {!isBlank && (
+        {props.emotion && (
           <Content>
             <Date>{props.date.getDate()}</Date>
-            {props.emotion && <Emoji />}
+            {renderEmoji(props.emotion)}
           </Content>
         )}
       </Container>

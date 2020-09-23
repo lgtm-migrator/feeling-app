@@ -65,16 +65,12 @@ export default function Month(props: Props): JSX.Element {
         <WeekDayTitle>S</WeekDayTitle>
 
         {/* Add blank calendar days so actual ones are inline with week day titles */}
-        {new Array(day).map((_, index) => (
+        {Array.from({ length: day }).map((_, index) => (
           <CalendarDay date={date} blank={true} key={index} />
         ))}
 
-        {new Array(numberOfDays).map((_, index) => (
-          <CalendarDay
-            date={addDays(date, index)}
-            emotion={array[Math.floor(Math.random() * array.length)]}
-            key={index}
-          />
+        {Array.from({ length: numberOfDays }).map((_, index) => (
+          <CalendarDay date={addDays(date, index)} key={index} />
         ))}
       </Content>
     </Container>
