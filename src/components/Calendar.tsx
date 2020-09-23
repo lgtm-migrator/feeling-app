@@ -29,9 +29,6 @@ export default function Calendar(): JSX.Element {
   const listRef = useRef<VariableSizeList>()
 
   useEffect(() => {
-    // Scroll to the current month
-    listRef.current?.scrollToItem(getIndexFromDate(new Date()))
-
     // Rerender list if window is resized
     const rerenderCalendar = () => listRef.current?.resetAfterIndex(0)
     window.addEventListener("resize", rerenderCalendar)
