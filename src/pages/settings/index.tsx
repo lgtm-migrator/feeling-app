@@ -1,5 +1,4 @@
 import Head from "next/head"
-import Router from "next/router"
 import { styled } from "linaria/react"
 
 import TopBar from "../../components/TopBar"
@@ -20,7 +19,6 @@ const Main = styled.main`
 const Separator = styled.hr`
   background-color: var(--light-grey-color);
   height: 1px;
-  /* background-color: #ccc; */
   border: none;
 `
 

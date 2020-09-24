@@ -1,7 +1,4 @@
-import Link from "next/link"
 import { styled } from "linaria/react"
-
-const Container = styled.a``
 
 const Title = styled.div`
   font-size: 1.8rem;
@@ -23,9 +20,9 @@ export default function Setting(props: Props): JSX.Element {
   const { title, subtitle, href } = props
 
   return (
-    <Container href={href}>
+    <a href={href}>
       <Title>{title}</Title>
       {subtitle && <Subtitle>{subtitle}</Subtitle>}
-    </Container>
+    </a>
   )
 }
