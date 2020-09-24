@@ -2,7 +2,9 @@
 
 exports[`Landing:  matches Header snapshot 1`] = `
 <HeaderContainer>
-  <test-file-stub />
+  <img
+    src="test-file-stub"
+  />
   <Links>
     <Link
       aria-label="Twitter"
@@ -10,7 +12,9 @@ exports[`Landing:  matches Header snapshot 1`] = `
       rel="noreferrer noopener"
       target="_blank"
     >
-      <test-file-stub />
+      <img
+        src="test-file-stub"
+      />
       <LinkText>
         Twitter
       </LinkText>
@@ -19,7 +23,9 @@ exports[`Landing:  matches Header snapshot 1`] = `
       aria-label="Contact us"
       href="mailto:hello@feeling.to"
     >
-      <test-file-stub />
+      <img
+        src="test-file-stub"
+      />
       <LinkText>
         Contact
       </LinkText>
@@ -72,9 +78,13 @@ exports[`Landing:  matches Main snapshot 1`] = `
     </List>
   </Description>
   <picture>
+    <source
+      srcSet="test-file-stub"
+      type="image/png"
+    />
     <PhoneImage
       alt="iPhone"
-      src="/iphone_crop.png"
+      src="test-file-stub"
     />
   </picture>
 </MainContainer>
