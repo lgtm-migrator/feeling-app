@@ -72,7 +72,7 @@ export default function TopBar(props: Props): JSX.Element {
             onClick={() => Router.back()}
             data-test="top-bar-back-icon"
           >
-            <img src={require("../assets/icons/back.svg")} />
+            <img src={require("../assets/icons/back.svg")} alt="Back" />
           </BackIconLink>
         )}
 

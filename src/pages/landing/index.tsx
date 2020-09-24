@@ -189,7 +189,10 @@ const PhoneImage = styled.img`
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={require("../../assets/icons/logo.svg")} />
+      <img
+        src={require("../../assets/icons/logo.svg")}
+        alt="Feeling App logo"
+      />
       <Links>
         <Link
           href="https://twitter.com/feelingapp"
@@ -197,11 +200,11 @@ export function Header() {
           rel="noreferrer noopener"
           aria-label="Twitter"
         >
-          <img src={require("../../assets/icons/twitter.svg")} />
+          <img src={require("../../assets/icons/twitter.svg")} alt="Twitter" />
           <LinkText>Twitter</LinkText>
         </Link>
         <Link href="mailto:hello@feeling.to" aria-label="Contact us">
-          <img src={require("../../assets/icons/email.svg")} />
+          <img src={require("../../assets/icons/email.svg")} alt="Email" />
           <LinkText>Contact</LinkText>
         </Link>
       </Links>

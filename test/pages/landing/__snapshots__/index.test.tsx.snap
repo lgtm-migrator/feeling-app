@@ -3,6 +3,7 @@
 exports[`Landing:  matches Header snapshot 1`] = `
 <HeaderContainer>
   <img
+    alt="Feeling App logo"
     src="test-file-stub"
   />
   <Links>
@@ -13,6 +14,7 @@ exports[`Landing:  matches Header snapshot 1`] = `
       target="_blank"
     >
       <img
+        alt="Twitter"
         src="test-file-stub"
       />
       <LinkText>
@@ -24,6 +26,7 @@ exports[`Landing:  matches Header snapshot 1`] = `
       href="mailto:hello@feeling.to"
     >
       <img
+        alt="Email"
         src="test-file-stub"
       />
       <LinkText>

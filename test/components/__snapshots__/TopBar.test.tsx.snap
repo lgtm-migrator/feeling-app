@@ -8,6 +8,7 @@ exports[`Top Bar:  matches snapshot 1`] = `
       onClick={[Function]}
     >
       <img
+        alt="Back"
         src="test-file-stub"
       />
     </BackIconLink>

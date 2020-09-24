@@ -71,20 +71,23 @@ export default function TabBar(): JSX.Element {
     <Container>
       <Link href="/me" passHref>
         <Tab active={pathname === "/me"} style={{ gridArea: "tab-1" }}>
-          <img src={require("../assets/icons/me.svg")} />
+          <img src={require("../assets/icons/me.svg")} alt="Me tab" />
           <TabLabel>Me</TabLabel>
         </Tab>
       </Link>
 
       <Link href="/insights" passHref>
         <Tab active={pathname === "/insights"} style={{ gridArea: "tab-2" }}>
-          <img src={require("../assets/icons/insights.svg")} />
+          <img
+            src={require("../assets/icons/insights.svg")}
+            alt="Insights tab"
+          />
           <TabLabel>Insights</TabLabel>
         </Tab>
       </Link>
 
       <FloatingActionButton>
-        <img src={require("../assets/emojis/upset.svg")} />
+        <img src={require("../assets/emojis/upset.svg")} alt="Emoji" />
       </FloatingActionButton>
 
       <Background>
