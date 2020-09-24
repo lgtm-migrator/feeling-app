@@ -72,13 +72,8 @@ exports[`Landing:  matches Main snapshot 1`] = `
     </List>
   </Description>
   <picture>
-    <source
-      srcSet="test-file-stub"
-      type="image/png"
-    />
     <PhoneImage
       alt="iPhone"
-      src="test-file-stub"
     />
   </picture>
 </MainContainer>

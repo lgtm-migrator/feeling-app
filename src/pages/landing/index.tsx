@@ -4,6 +4,8 @@ import { styled } from "linaria/react"
 import FeelingLogo from "../../assets/icons/logo.svg?sprite"
 import TwitterSvg from "../../assets/icons/twitter.svg?sprite"
 import EmailSvg from "../../assets/icons/email.svg?sprite"
+// @ts-ignore
+import IPhone from "../../../public/iphone_crop.png?resize&sizes[]=300&sizes[]=500&sizes[]=850"
 
 const HeaderContainer = styled.header`
   height: var(--header-height);
@@ -233,14 +235,7 @@ export function Main() {
       </Description>
 
       <picture>
-        <source
-          srcSet={require("../../../public/iphone_crop.png")}
-          type="image/png"
-        />
-        <PhoneImage
-          src={require("../../../public/iphone_crop.png")}
-          alt="iPhone"
-        />
+        <PhoneImage src={IPhone.src} srcSet={IPhone.srcSet} alt="iPhone" />
       </picture>
     </MainContainer>
   )
