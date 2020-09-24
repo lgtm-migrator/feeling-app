@@ -1,12 +1,10 @@
 const withPlugins = require("next-compose-plugins")
 const linaria = require("next-linaria")
-const svgr = require("next-svgr")
 const pwa = require("next-pwa")
 const optimizedImages = require("next-optimized-images")
 
 module.exports = withPlugins(
   [
-    svgr,
     linaria,
     [
       pwa,

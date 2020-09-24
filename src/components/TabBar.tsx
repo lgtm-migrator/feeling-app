@@ -2,10 +2,6 @@ import Link from "next/link"
 import { styled } from "linaria/react"
 import { useRouter } from "next/router"
 
-import MeIcon from "../assets/icons/me.svg"
-import InsightsIcon from "../assets/icons/insights.svg"
-import UpsetEmoji from "../assets/emojis/upset.svg"
-
 const Container = styled.nav`
   width: 100%;
   display: grid;
@@ -75,20 +71,20 @@ export default function TabBar(): JSX.Element {
     <Container>
       <Link href="/me" passHref>
         <Tab active={pathname === "/me"} style={{ gridArea: "tab-1" }}>
-          <MeIcon />
+          <img src={require("../assets/icons/me.svg")} />
           <TabLabel>Me</TabLabel>
         </Tab>
       </Link>
 
       <Link href="/insights" passHref>
         <Tab active={pathname === "/insights"} style={{ gridArea: "tab-2" }}>
-          <InsightsIcon />
+          <img src={require("../assets/icons/insights.svg")} />
           <TabLabel>Insights</TabLabel>
         </Tab>
       </Link>
 
       <FloatingActionButton>
-        <UpsetEmoji />
+        <img src={require("../assets/emojis/upset.svg")} />
       </FloatingActionButton>
 
       <Background>

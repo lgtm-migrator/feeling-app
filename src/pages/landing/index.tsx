@@ -1,8 +1,5 @@
 import Head from "next/head"
 import { styled } from "linaria/react"
-import FeelingLogo from "../../assets/icons/logo.svg"
-import TwitterSvg from "../../assets/icons/twitter.svg"
-import EmailSvg from "../../assets/icons/email.svg"
 
 const HeaderContainer = styled.header`
   height: var(--header-height);
@@ -189,11 +186,10 @@ const PhoneImage = styled.img`
     width: calc(var(--grid-width) / 2);
   }
 `
-
 export function Header() {
   return (
     <HeaderContainer>
-      <FeelingLogo />
+      <img src={require("../../assets/icons/logo.svg")} />
       <Links>
         <Link
           href="https://twitter.com/feelingapp"
@@ -201,11 +197,11 @@ export function Header() {
           rel="noreferrer noopener"
           aria-label="Twitter"
         >
-          <TwitterSvg />
+          <img src={require("../../assets/icons/twitter.svg")} />
           <LinkText>Twitter</LinkText>
         </Link>
         <Link href="mailto:hello@feeling.to" aria-label="Contact us">
-          <EmailSvg />
+          <img src={require("../../assets/icons/email.svg")} />
           <LinkText>Contact</LinkText>
         </Link>
       </Links>
