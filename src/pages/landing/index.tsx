@@ -233,7 +233,14 @@ export function Main() {
       </Description>
 
       <picture>
-        <PhoneImage src="/iphone_crop.png" alt="iPhone" />
+        <source
+          srcSet={require("../../../public/iphone_crop.png")}
+          type="image/png"
+        />
+        <PhoneImage
+          src={require("../../../public/iphone_crop.png")}
+          alt="iPhone"
+        />
       </picture>
     </MainContainer>
   )
