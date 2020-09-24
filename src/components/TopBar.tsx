@@ -2,6 +2,8 @@ import Link from "next/link"
 import Router from "next/router"
 import { styled } from "linaria/react"
 
+import BackIcon from "../assets/icons/back.svg?sprite"
+
 const Container = styled.div`
   height: 9.6rem;
   padding: var(--space-s) var(--space-m);
@@ -72,7 +74,7 @@ export default function TopBar(props: Props): JSX.Element {
             onClick={() => Router.back()}
             data-test="top-bar-back-icon"
           >
-            <img src={require("../assets/icons/back.svg")} alt="Back" />
+            <BackIcon />
           </BackIconLink>
         )}
 

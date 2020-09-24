@@ -14,10 +14,7 @@ exports[`Tab Bar:  matches tab bar snapshot in /insights 1`] = `
         }
       }
     >
-      <img
-        alt="Me tab"
-        src="test-file-stub"
-      />
+      <test-file-stub />
       <TabLabel>
         Me
       </TabLabel>
@@ -35,20 +32,14 @@ exports[`Tab Bar:  matches tab bar snapshot in /insights 1`] = `
         }
       }
     >
-      <img
-        alt="Insights tab"
-        src="test-file-stub"
-      />
+      <test-file-stub />
       <TabLabel>
         Insights
       </TabLabel>
     </Tab>
   </Link>
   <FloatingActionButton>
-    <img
-      alt="Emoji"
-      src="test-file-stub"
-    />
+    <test-file-stub />
   </FloatingActionButton>
   <Background>
     <defs>
@@ -99,10 +90,7 @@ exports[`Tab Bar:  matches tab bar snapshot in /me 1`] = `
         }
       }
     >
-      <img
-        alt="Me tab"
-        src="test-file-stub"
-      />
+      <test-file-stub />
       <TabLabel>
         Me
       </TabLabel>
@@ -120,20 +108,14 @@ exports[`Tab Bar:  matches tab bar snapshot in /me 1`] = `
         }
       }
     >
-      <img
-        alt="Insights tab"
-        src="test-file-stub"
-      />
+      <test-file-stub />
       <TabLabel>
         Insights
       </TabLabel>
     </Tab>
   </Link>
   <FloatingActionButton>
-    <img
-      alt="Emoji"
-      src="test-file-stub"
-    />
+    <test-file-stub />
   </FloatingActionButton>
   <Background>
     <defs>

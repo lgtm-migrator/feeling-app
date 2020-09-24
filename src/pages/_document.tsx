@@ -6,11 +6,18 @@ import Document, {
   DocumentContext,
   DocumentInitialProps,
 } from "next/document"
+import sprite from "svg-sprite-loader/runtime/sprite.build"
 
 export default class MyDocument extends Document {
-  static getInitialProps = (
-    ctx: DocumentContext
-  ): Promise<DocumentInitialProps> => Document.getInitialProps(ctx)
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx)
+    const spriteContent = sprite.stringify()
+
+    return {
+      spriteContent,
+      ...initialProps,
+    }
+  }
 
   render(): JSX.Element {
     return (

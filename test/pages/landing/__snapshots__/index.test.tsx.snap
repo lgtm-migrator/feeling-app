@@ -2,10 +2,7 @@
 
 exports[`Landing:  matches Header snapshot 1`] = `
 <HeaderContainer>
-  <img
-    alt="Feeling App logo"
-    src="test-file-stub"
-  />
+  <test-file-stub />
   <Links>
     <Link
       aria-label="Twitter"
@@ -13,10 +10,7 @@ exports[`Landing:  matches Header snapshot 1`] = `
       rel="noreferrer noopener"
       target="_blank"
     >
-      <img
-        alt="Twitter"
-        src="test-file-stub"
-      />
+      <test-file-stub />
       <LinkText>
         Twitter
       </LinkText>
@@ -25,10 +19,7 @@ exports[`Landing:  matches Header snapshot 1`] = `
       aria-label="Contact us"
       href="mailto:hello@feeling.to"
     >
-      <img
-        alt="Email"
-        src="test-file-stub"
-      />
+      <test-file-stub />
       <LinkText>
         Contact
       </LinkText>

@@ -21,11 +21,12 @@
     ]
   },
   "dependencies": {
+    "@types/imagemin-svgo": "^7.0.0",
+    "@types/svg-sprite-loader": "^3.9.2",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-prettier": "3.1.4",
     "identity-obj-proxy": "3.0.0",
     "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^8.0.0",
     "linaria": "2.0.0-rc.3",
     "next": "9.5.3",
     "next-compose-plugins": "2.2.0",
@@ -35,6 +36,7 @@
     "prettier": "2.1.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "svg-sprite-loader": "^5.0.0",
     "swr": "0.3.4"
   },
   "devDependencies": {

@@ -11,10 +11,7 @@ exports[`Me:  matches snapshot 1`] = `
     rightIcon={
       Object {
         "href": "/settings",
-        "icon": <img
-          alt="Settings"
-          src="test-file-stub"
-        />,
+        "icon": <test-file-stub />,
         "label": "Settings",
       }
     }

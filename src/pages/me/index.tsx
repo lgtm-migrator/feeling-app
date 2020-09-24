@@ -1,6 +1,7 @@
 import Head from "next/head"
 
 import TopBar from "../../components/TopBar"
+import SettingsIcon from "../../assets/icons/settings.svg?sprite"
 
 export default function Me(): JSX.Element {
   return (
@@ -13,12 +14,7 @@ export default function Me(): JSX.Element {
         title="Hey Michael,"
         subtitle="How are you feeling today?"
         rightIcon={{
-          icon: (
-            <img
-              src={require("../../assets/icons/settings.svg")}
-              alt="Settings"
-            />
-          ),
+          icon: <SettingsIcon />,
           href: "/settings",
           label: "Settings",
         }}
