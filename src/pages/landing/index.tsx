@@ -5,7 +5,7 @@ import FeelingLogo from "../../assets/icons/logo.svg?sprite"
 import TwitterSvg from "../../assets/icons/twitter.svg?sprite"
 import EmailSvg from "../../assets/icons/email.svg?sprite"
 // @ts-ignore
-import IPhone from "../../../public/iphone_crop.png?webp?resize&sizes[]=300&sizes[]=500&sizes[]=850"
+import IPhone from "../../../public/iphone_crop.png?resize&sizes[]=300&sizes[]=500&sizes[]=850"
 
 const HeaderContainer = styled.header`
   height: var(--header-height);
