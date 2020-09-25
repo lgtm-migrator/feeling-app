@@ -12,10 +12,11 @@ const Container = styled.a`
   width: 100%;
 `
 
-const Background = styled.div<{ backgroundColor: string; isToday?: boolean }>`
+const Background = styled.div<{ backgroundColor?: string; isToday?: boolean }>`
   grid-area: content;
   border-radius: 12px;
-  background-color: ${(props) => props.backgroundColor};
+  background-color: ${(props) =>
+    props.backgroundColor || "var(--light-grey-color)"};
   width: 100%;
   height: 0;
   padding-bottom: 100%;
@@ -58,13 +59,21 @@ export default function CalendarDay(props: Props): JSX.Element {
     )
   }
 
+  if (!props.emotion) {
+    return (
+      <Container as="div">
+        <Background isToday={isToday(props.date)} />
+      </Container>
+    )
+  }
+
   return (
     <Link
       href="/me/day/[date]"
       as={"/me/day/" + format(props.date, "dd-MM-yyyy")}
       passHref={true}
     >
-      <Container>
+      <Container aria-label={format(props.date, "Mo MMMM yyyy")}>
         <Background
           backgroundColor={getEmotionColor(props.emotion)}
           isToday={isToday(props.date)}
