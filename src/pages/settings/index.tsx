@@ -4,7 +4,7 @@ import { styled } from "linaria/react"
 import TopBar from "../../components/TopBar"
 import SettingItem from "../../components/SettingItem"
 
-const Main = styled.main`
+const Container = styled.article`
   display: flex;
   flex-direction: column;
   gap: var(--space-s);
@@ -31,7 +31,7 @@ export default function Settings(): JSX.Element {
 
       <TopBar title="Settings" backButton={true} />
 
-      <Main>
+      <Container>
         <SettingItem
           title="Reminders"
           subtitle="Be reminded everyday to log how you're feeling throughout the day"
@@ -52,7 +52,7 @@ export default function Settings(): JSX.Element {
           subtitle="You are signed in as Michael Lee"
           href="/signout"
         />
-      </Main>
+      </Container>
     </>
   )
 }
