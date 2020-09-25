@@ -5,8 +5,8 @@ import TopBar from "../../components/TopBar"
 import SettingItem from "../../components/SettingItem"
 
 const Container = styled.article`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-flow: row;
   gap: var(--space-s);
 
   margin: var(--space-s) var(--space-m) 0;
