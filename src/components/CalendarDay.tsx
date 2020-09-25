@@ -51,6 +51,7 @@ interface Props {
 }
 
 export default function CalendarDay(props: Props): JSX.Element {
+  // Used as an invisible placeholder when a month starts later in the week
   if (props.blank) {
     return (
       <Container as="div">
@@ -59,6 +60,7 @@ export default function CalendarDay(props: Props): JSX.Element {
     )
   }
 
+  // Greyed out day when no feelings have been logged for that day
   if (!props.emotion) {
     return (
       <Container as="div">
