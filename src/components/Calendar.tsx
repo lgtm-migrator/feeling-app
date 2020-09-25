@@ -1,7 +1,7 @@
 import AutoSizer from "react-virtualized-auto-sizer"
-import getWeeksInMonth from "date-fns/getWeeksInMonth"
 import { useEffect, useRef } from "react"
 import { VariableSizeList } from "react-window"
+import { getWeeksInMonth } from "date-fns/esm"
 
 import Month from "./CalendarMonth"
 import { getDateFromIndex, getIndexFromDate, MAX_DATE } from "../utils/dates"

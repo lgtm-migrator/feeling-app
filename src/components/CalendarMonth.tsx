@@ -1,9 +1,6 @@
-import addDays from "date-fns/addDays"
-import format from "date-fns/format"
-import getDaysInMonth from "date-fns/getDaysInMonth"
-import getISODay from "date-fns/getISODay"
-import { styled } from "linaria/react"
 import { CSSProperties } from "react"
+import { styled } from "linaria/react"
+import { addDays, format, getDaysInMonth, getISODay } from "date-fns/esm"
 
 import CalendarDay from "./CalendarDay"
 import { getDateFromIndex } from "../utils/dates"
