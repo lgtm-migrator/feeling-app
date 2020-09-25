@@ -12,7 +12,7 @@ export enum Emotion {
   AMAZING = "amazing",
 }
 
-export function getEmotionColor(emotion: Emotion): string {
+export function getEmotionColor(emotion?: Emotion): string {
   switch (emotion) {
     case Emotion.ANGRY:
       return "var(--purple-color)"
@@ -29,7 +29,7 @@ export function getEmotionColor(emotion: Emotion): string {
   }
 }
 
-export function renderEmoji(emotion: Emotion): JSX.Element {
+export function renderEmoji(emotion?: Emotion): JSX.Element {
   switch (emotion) {
     case Emotion.ANGRY:
       return <AngryIcon />
