@@ -11,7 +11,7 @@ exports[`Settings:  matches snapshot 1`] = `
     backButton={true}
     title="Settings"
   />
-  <Main>
+  <Container>
     <SettingItem
       href="/settings/reminders"
       subtitle="Be reminded everyday to log how you're feeling throughout the day"
@@ -41,6 +41,6 @@ exports[`Settings:  matches snapshot 1`] = `
       subtitle="You are signed in as Michael Lee"
       title="Sign Out"
     />
-  </Main>
+  </Container>
 </Fragment>
 `;
