@@ -3,6 +3,7 @@ import { styled } from "linaria/react"
 const Title = styled.div`
   font-size: 1.8rem;
   font-weight: 500;
+  margin-bottom: var(--space-xxxs);
 `
 
 const Subtitle = styled.div`
