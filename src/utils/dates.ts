@@ -1,4 +1,4 @@
-import { differenceInMonths, addMonths, addYears } from "date-fns/esm"
+import { differenceInMonths, addMonths, addYears } from "date-fns"
 
 // Specify limits for the calendar in the Me tab
 export const MIN_DATE = new Date(2020, 0, 1)

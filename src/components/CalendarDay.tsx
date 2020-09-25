@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { styled } from "linaria/react"
-import { format, isToday } from "date-fns/esm"
+import { format, isToday } from "date-fns"
 
 import { Emotion, getEmotionColor, renderEmoji } from "../utils/emotions"
 

@@ -1,6 +1,6 @@
 import { CSSProperties } from "react"
 import { styled } from "linaria/react"
-import { addDays, format, getDaysInMonth, getISODay } from "date-fns/esm"
+import { addDays, format, getDaysInMonth, getISODay } from "date-fns"
 
 import CalendarDay from "./CalendarDay"
 import { getDateFromIndex } from "../utils/dates"

@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
 import { styled } from "linaria/react"
-import { format, parse } from "date-fns/esm"
+import { format, parse } from "date-fns"
 
 import TopBar from "../../../components/TopBar"
 import { useEffect } from "react"
