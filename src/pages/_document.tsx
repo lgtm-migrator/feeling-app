@@ -1,11 +1,4 @@
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-  DocumentInitialProps,
-} from "next/document"
+import Document, { Html, Head, Main, NextScript } from "next/document"
 import sprite from "svg-sprite-loader/runtime/sprite.build"
 
 export default class MyDocument extends Document {
