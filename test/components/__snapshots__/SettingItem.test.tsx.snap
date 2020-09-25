@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Setting:  matches snapshot 1`] = `
+<a
+  href="/"
+>
+  <Title>
+    Lorem ipsum
+  </Title>
+  <Subtitle>
+    dolor sit amet
+  </Subtitle>
+</a>
+`;
+
+exports[`Setting:  matches snapshot without href 1`] = `
+<a>
+  <Title>
+    Lorem ipsum
+  </Title>
+  <Subtitle>
+    dolor sit amet
+  </Subtitle>
+</a>
+`;
+
+exports[`Setting:  matches snapshot without subtitle 1`] = `
+<a
+  href="/"
+>
+  <Title>
+    Lorem ipsum
+  </Title>
+</a>
+`;
+
+exports[`Setting:  matches snapshot without subtitle and href 1`] = `
+<a>
+  <Title>
+    Lorem ipsum
+  </Title>
+</a>
+`;

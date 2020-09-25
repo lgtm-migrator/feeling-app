@@ -16,7 +16,7 @@ interface Props {
   href?: string
 }
 
-export default function Setting(props: Props): JSX.Element {
+export default function SettingItem(props: Props): JSX.Element {
   const { title, subtitle, href } = props
 
   return (

@@ -2,7 +2,7 @@ import Head from "next/head"
 import { styled } from "linaria/react"
 
 import TopBar from "../../components/TopBar"
-import Setting from "../../components/Setting"
+import SettingItem from "../../components/SettingItem"
 
 const Main = styled.main`
   display: flex;
@@ -32,22 +32,22 @@ export default function Settings(): JSX.Element {
       <TopBar title="Settings" backButton={true} />
 
       <Main>
-        <Setting
+        <SettingItem
           title="Reminders"
           subtitle="Be reminded everyday to log how you're feeling throughout the day"
           href="/settings/reminders"
         />
-        <Setting
+        <SettingItem
           title="Smart Analytics"
           subtitle="Probabo, inquit, modo dixi, constituto, ut alterum esse admonere interesse enim ad id."
           href="/settings/analytics"
         />
         <Separator />
-        <Setting title="Terms and Conditions" href="" />
-        <Setting title="Privacy Policy" href="" />
+        <SettingItem title="Terms and Conditions" href="" />
+        <SettingItem title="Privacy Policy" href="" />
         <Separator />
-        <Setting title="Version" subtitle="1.0" />
-        <Setting
+        <SettingItem title="Version" subtitle="1.0" />
+        <SettingItem
           title="Sign Out"
           subtitle="You are signed in as Michael Lee"
           href="/signout"

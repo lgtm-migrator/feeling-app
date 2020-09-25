@@ -12,31 +12,31 @@ exports[`Settings:  matches snapshot 1`] = `
     title="Settings"
   />
   <Main>
-    <Setting
+    <SettingItem
       href="/settings/reminders"
       subtitle="Be reminded everyday to log how you're feeling throughout the day"
       title="Reminders"
     />
-    <Setting
+    <SettingItem
       href="/settings/analytics"
       subtitle="Probabo, inquit, modo dixi, constituto, ut alterum esse admonere interesse enim ad id."
       title="Smart Analytics"
     />
     <Separator />
-    <Setting
+    <SettingItem
       href=""
       title="Terms and Conditions"
     />
-    <Setting
+    <SettingItem
       href=""
       title="Privacy Policy"
     />
     <Separator />
-    <Setting
+    <SettingItem
       subtitle="1.0"
       title="Version"
     />
-    <Setting
+    <SettingItem
       href="/signout"
       subtitle="You are signed in as Michael Lee"
       title="Sign Out"
