@@ -1,10 +1,10 @@
 import AutoSizer from "react-virtualized-auto-sizer"
 import getWeeksInMonth from "date-fns/getWeeksInMonth"
+import { useEffect, useRef } from "react"
 import { VariableSizeList } from "react-window"
 
 import Month from "./CalendarMonth"
 import { getDateFromIndex, getIndexFromDate, MAX_DATE } from "../utils/dates"
-import { useEffect, useRef } from "react"
 
 const remToPixels = (rem: number) =>
   rem * parseFloat(getComputedStyle(document.documentElement).fontSize)
@@ -25,11 +25,22 @@ function calculateMonthHeight(index: number): number {
   return monthTitle + weekDayTitle + marginBottom + daysHeight + gridGap
 }
 
-export default function Calendar(): JSX.Element {
+function CalendarList({
+  width,
+  height,
+}: {
+  width: number
+  height: number
+}): JSX.Element {
   const listRef = useRef<VariableSizeList>()
 
+  // Scroll to current month
   useEffect(() => {
-    // Rerender list if window is resized
+    listRef.current?.scrollToItem(getIndexFromDate(new Date()), "smart")
+  })
+
+  // Rerender list if window is resized
+  useEffect(() => {
     const rerenderCalendar = () => listRef.current?.resetAfterIndex(0)
     window.addEventListener("resize", rerenderCalendar)
 
@@ -37,21 +48,23 @@ export default function Calendar(): JSX.Element {
   }, [listRef.current])
 
   return (
+    <VariableSizeList
+      itemCount={getIndexFromDate(MAX_DATE)}
+      itemSize={calculateMonthHeight}
+      height={height}
+      width={width}
+      ref={listRef}
+      overscanCount={3}
+    >
+      {({ index, style }) => <Month index={index} key={index} style={style} />}
+    </VariableSizeList>
+  )
+}
+
+export default function Calendar(): JSX.Element {
+  return (
     <AutoSizer>
-      {({ width, height }) => (
-        <VariableSizeList
-          itemCount={getIndexFromDate(MAX_DATE)}
-          itemSize={calculateMonthHeight}
-          height={height}
-          width={width}
-          ref={listRef}
-          overscanCount={3}
-        >
-          {({ index, style }) => (
-            <Month index={index} key={index} style={style} />
-          )}
-        </VariableSizeList>
-      )}
+      {({ width, height }) => <CalendarList width={width} height={height} />}
     </AutoSizer>
   )
 }
