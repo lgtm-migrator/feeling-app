@@ -4,8 +4,8 @@ import { differenceInMonths, addMonths, addYears } from "date-fns/esm"
 export const MIN_DATE = new Date(2020, 0, 1)
 export const MAX_DATE = addYears(new Date(), 1)
 
-export const getDateFromIndex = (index: number): Date =>
+export const getDateFromIndex = (index: number, minDate = MIN_DATE): Date =>
   addMonths(MIN_DATE, index)
 
-export const getIndexFromDate = (date: Date): number =>
+export const getIndexFromDate = (date: Date, minDate = MIN_DATE): number =>
   differenceInMonths(date, MIN_DATE)
