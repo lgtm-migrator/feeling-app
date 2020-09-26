@@ -1,4 +1,3 @@
-import * as nextRouter from "next/router"
 import { shallow } from "enzyme"
 
 import CalendarDay from "../../src/components/CalendarDay"
