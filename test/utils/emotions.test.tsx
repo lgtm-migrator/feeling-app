@@ -14,7 +14,7 @@ describe("Render an emotion's emoji: ", () => {
     { emotion: Emotion.UNSURE, icon: <UnsureIcon /> },
     { emotion: Emotion.GREAT, icon: <GreatIcon /> },
     { emotion: Emotion.AMAZING, icon: <AmazingIcon /> },
-    [undefined, undefined],
+    { emotion: undefined, color: undefined },
   ]
 
   each(emotionIcons).it("returns an emoji", (emotionIcon) => {
@@ -30,7 +30,7 @@ describe("Emotion color: ", () => {
     { emotion: Emotion.UNSURE, color: "var(--green-color)" },
     { emotion: Emotion.GREAT, color: "var(--yellow-color)" },
     { emotion: Emotion.AMAZING, color: "var(--red-color)" },
-    [undefined, "var(--light-grey-color)"],
+    { emotion: undefined, color: "var(--light-grey-color)" },
   ]
 
   each(emotionColors).it(
