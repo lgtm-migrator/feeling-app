@@ -6,10 +6,10 @@ import { getWeeksInMonth } from "date-fns"
 import Month from "./CalendarMonth"
 import { getDateFromIndex, getIndexFromDate, MAX_DATE } from "../utils/dates"
 
-const remToPixels = (rem: number) =>
+export const remToPixels = (rem: number): number =>
   rem * parseFloat(getComputedStyle(document.documentElement).fontSize)
 
-function calculateMonthHeight(index: number): number {
+export function calculateMonthHeight(index: number): number {
   const marginBottom = 24
   const monthTitle = remToPixels(1.6) + 12
   const weekDayTitle = remToPixels(1.2) + 8
