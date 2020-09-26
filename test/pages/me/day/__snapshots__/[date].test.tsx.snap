@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Me:  matches snapshot 1`] = `
+<Fragment>
+  <Head>
+    <title>
+      1st January 2020
+       / Feeling
+    </title>
+  </Head>
+  <TopBar
+    backButton={true}
+    title="1st January 2020"
+  />
+  <Container />
+</Fragment>
+`;

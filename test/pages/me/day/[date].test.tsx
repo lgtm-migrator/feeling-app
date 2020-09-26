@@ -1,4 +1,6 @@
+import * as nextRouter from "next/router"
 import { shallow } from "enzyme"
+
 import Date from "../../../../src/pages/me/day/[date]"
 
 nextRouter.useRouter = jest.fn()
