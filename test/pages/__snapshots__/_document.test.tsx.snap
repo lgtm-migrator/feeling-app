@@ -27,6 +27,18 @@ exports[`Document:  matches snapshot 1`] = `
       href="/icons/safari-pinned-tab.svg"
       rel="mask-icon"
     />
+    <link
+      href="/manifest.json"
+      rel="manifest"
+    />
+    <meta
+      content="#caeaf8"
+      name="theme-color"
+    />
+    <meta
+      content="The Feeling app - Your feelings are about to get a whole lot smarter"
+      name="description"
+    />
   </Head>
   <body>
     <Main />

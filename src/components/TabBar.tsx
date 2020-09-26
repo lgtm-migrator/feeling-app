@@ -2,9 +2,9 @@ import Link from "next/link"
 import { styled } from "linaria/react"
 import { useRouter } from "next/router"
 
-import MeIcon from "../assets/icons/me.svg"
-import InsightsIcon from "../assets/icons/insights.svg"
-import UpsetEmoji from "../assets/emojis/upset.svg"
+import MeIcon from "../assets/icons/me.svg?sprite"
+import InsightsIcon from "../assets/icons/insights.svg?sprite"
+import UpsetEmoji from "../assets/emojis/upset.svg?sprite"
 
 const Container = styled.nav`
   width: 100%;

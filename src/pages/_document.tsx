@@ -1,16 +1,16 @@
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-  DocumentInitialProps,
-} from "next/document"
+import Document, { Html, Head, Main, NextScript } from "next/document"
+import sprite from "svg-sprite-loader/runtime/sprite.build"
 
 export default class MyDocument extends Document {
-  static getInitialProps = (
-    ctx: DocumentContext
-  ): Promise<DocumentInitialProps> => Document.getInitialProps(ctx)
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx)
+    const spriteContent = sprite.stringify()
+
+    return {
+      spriteContent,
+      ...initialProps,
+    }
+  }
 
   render(): JSX.Element {
     return (
@@ -37,6 +37,12 @@ export default class MyDocument extends Document {
             rel="mask-icon"
             href="/icons/safari-pinned-tab.svg"
             color="#caeaf8"
+          />
+          <link rel="manifest" href="/manifest.json" />
+          <meta name="theme-color" content="#caeaf8" />
+          <meta
+            name="description"
+            content="The Feeling app - Your feelings are about to get a whole lot smarter"
           />
         </Head>
 

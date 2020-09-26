@@ -2,7 +2,7 @@ import Link from "next/link"
 import Router from "next/router"
 import { styled } from "linaria/react"
 
-import BackIcon from "../assets/icons/back.svg"
+import BackIcon from "../assets/icons/back.svg?sprite"
 
 const Container = styled.div`
   height: 9.6rem;
@@ -59,6 +59,7 @@ interface Props {
   rightIcon?: {
     icon: JSX.Element
     href: string
+    label: string
   }
 }
 
@@ -69,8 +70,11 @@ export default function TopBar(props: Props): JSX.Element {
     <Container>
       <Content>
         {backButton && (
-          <BackIconLink onClick={() => Router.back()} data-test="top-bar-back-icon">
-            <BackIcon/>
+          <BackIconLink
+            onClick={() => Router.back()}
+            data-test="top-bar-back-icon"
+          >
+            <BackIcon />
           </BackIconLink>
         )}
 
@@ -81,7 +85,7 @@ export default function TopBar(props: Props): JSX.Element {
 
         {rightIcon && (
           <Link href={rightIcon.href} passHref>
-            <IconLink>{rightIcon.icon}</IconLink>
+            <IconLink aria-label={rightIcon.label}>{rightIcon.icon}</IconLink>
           </Link>
         )}
       </Content>
