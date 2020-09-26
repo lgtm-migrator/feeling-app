@@ -15,3 +15,5 @@ exports[`Me:  matches snapshot 1`] = `
   <Container />
 </Fragment>
 `;
+
+exports[`Me:  renders nothing when date is not provided 1`] = `""`;

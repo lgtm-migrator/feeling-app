@@ -8,6 +8,11 @@ describe("Calendar: ", () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it("calendar list matches snapshot", () => {
+    const wrapper = shallow(<Calendar.CalendarList width={400} height={800} />)
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it("converts rem to pixels", () => {
     document.documentElement.style.setProperty("font-size", "10px")
     const result = Calendar.remToPixels(1.6)
@@ -24,7 +29,7 @@ describe("Calendar: ", () => {
     const fiveRowMonth = Calendar.calculateMonthHeight(0)
     expect(fiveRowMonth).toEqual(520)
 
-    const sixRowMonth = Calendar.calculateMonthHeight(0)
+    const sixRowMonth = Calendar.calculateMonthHeight(4)
     expect(sixRowMonth).toEqual(608)
   })
 })

@@ -1,5 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Calendar:  calendar list matches snapshot 1`] = `
+<List
+  direction="ltr"
+  height={800}
+  itemCount={20}
+  itemSize={[Function]}
+  layout="vertical"
+  overscanCount={3}
+  useIsScrolling={false}
+  width={400}
+>
+  <Component />
+</List>
+`;
+
 exports[`Calendar:  matches snapshot 1`] = `
 <AutoSizer
   disableHeight={false}

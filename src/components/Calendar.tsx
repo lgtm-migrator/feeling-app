@@ -25,7 +25,7 @@ export function calculateMonthHeight(index: number): number {
   return monthTitle + weekDayTitle + marginBottom + daysHeight + gridGap
 }
 
-function CalendarList({
+export function CalendarList({
   width,
   height,
 }: {
