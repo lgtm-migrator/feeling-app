@@ -39,6 +39,7 @@ export default class MyDocument extends Document {
             color="#caeaf8"
           />
           <link rel="manifest" href="/manifest.json" />
+          <meta name="theme-color" content="#caeaf8" />
           <meta
             name="description"
             content="The Feeling app - Your feelings are about to get a whole lot smarter"

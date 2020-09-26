@@ -7,3 +7,8 @@ declare module "*.svg?sprite" {
   >>
   export default ReactComponent
 }
+
+declare module "*&img" {
+  const img: { src; srcSet }
+  export = img
+}
