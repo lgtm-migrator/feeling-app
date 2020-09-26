@@ -71,7 +71,7 @@ const FloatingActionButton = styled.div`
 
 export default function TabBar(): JSX.Element {
   const { pathname } = useRouter()
-  const tabBarRef = useRef(null)
+  const tabBarRef = useRef<HTMLElement>()
 
   useLayoutEffect(() => {
     if (tabBarRef.current) {
@@ -80,7 +80,7 @@ export default function TabBar(): JSX.Element {
         tabBarRef.current.clientHeight + "px"
       )
     }
-  }, [tabBarRef])
+  }, [tabBarRef.current])
 
   return (
     <Container ref={tabBarRef}>
