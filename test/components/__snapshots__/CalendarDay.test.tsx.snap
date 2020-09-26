@@ -1,25 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Calendar day:  Blank day matches snapshot 1`] = `
-<Container
-  as="div"
->
-  <Background
-    backgroundColor="transparent"
-  />
-</Container>
-`;
-
-exports[`Calendar day:  Greyed out day matches snapshot 1`] = `
-<Container
-  as="div"
->
-  <Background
-    isToday={false}
-  />
-</Container>
-`;
-
 exports[`Calendar day:  blank day matches snapshot 1`] = `
 <Container
   as="div"
