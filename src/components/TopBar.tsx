@@ -2,7 +2,7 @@ import Link from "next/link"
 import Router from "next/router"
 import { styled } from "linaria/react"
 
-import BackIcon from "../assets/icons/back.svg"
+import BackIcon from "../assets/icons/back.svg?sprite"
 
 const Container = styled.div`
   height: 9.6rem;

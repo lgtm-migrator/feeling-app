@@ -5,6 +5,7 @@ exports[`Landing:  matches Header snapshot 1`] = `
   <test-file-stub />
   <Links>
     <Link
+      aria-label="Twitter"
       href="https://twitter.com/feelingapp"
       rel="noreferrer noopener"
       target="_blank"
@@ -15,6 +16,7 @@ exports[`Landing:  matches Header snapshot 1`] = `
       </LinkText>
     </Link>
     <Link
+      aria-label="Contact us"
       href="mailto:hello@feeling.to"
     >
       <test-file-stub />
@@ -47,6 +49,7 @@ exports[`Landing:  matches Main snapshot 1`] = `
   </Title>
   <Input>
     <EmailInput
+      aria-label="Email"
       placeholder="Your email"
       type="text"
     />
@@ -71,7 +74,6 @@ exports[`Landing:  matches Main snapshot 1`] = `
   <picture>
     <PhoneImage
       alt="iPhone"
-      src="/iphone_crop.png"
     />
   </picture>
 </MainContainer>
