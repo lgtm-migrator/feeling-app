@@ -21,7 +21,10 @@ describe("Calendar: ", () => {
       .spyOn(document.documentElement, "clientWidth", "get")
       .mockImplementation(() => 1000)
 
-    const height = Calendar.calculateMonthHeight(1)
-    expect(height).toEqual(520)
+    const fiveRowMonth = Calendar.calculateMonthHeight(0)
+    expect(fiveRowMonth).toEqual(520)
+
+    const sixRowMonth = Calendar.calculateMonthHeight(0)
+    expect(sixRowMonth).toEqual(608)
   })
 })
