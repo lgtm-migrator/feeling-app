@@ -1,8 +1,8 @@
-import AngryIcon from "../assets/emojis/angry.svg"
-import UpsetIcon from "../assets/emojis/upset.svg"
-import UnsureIcon from "../assets/emojis/unsure.svg"
-import GreatIcon from "../assets/emojis/great.svg"
-import AmazingIcon from "../assets/emojis/amazing.svg"
+import AngryIcon from "../assets/emojis/angry.svg?sprite"
+import UpsetIcon from "../assets/emojis/upset.svg?sprite"
+import UnsureIcon from "../assets/emojis/unsure.svg?sprite"
+import GreatIcon from "../assets/emojis/great.svg?sprite"
+import AmazingIcon from "../assets/emojis/amazing.svg?sprite"
 
 export enum Emotion {
   ANGRY = "angry",
