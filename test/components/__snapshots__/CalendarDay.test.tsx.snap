@@ -21,11 +21,24 @@ exports[`Calendar day:  greyed out day matches snapshot 1`] = `
 `;
 
 exports[`Calendar day:  matches snapshot 1`] = `
-<Container
-  as="div"
+<Link
+  as="/me/day/01-02-2000"
+  href="/me/day/[date]"
+  passHref={true}
 >
-  <Background
-    isToday={false}
-  />
-</Container>
+  <Container
+    aria-label="2nd February 2000"
+  >
+    <Background
+      backgroundColor="var(--red-color)"
+      isToday={false}
+    />
+    <Content>
+      <Date>
+        1
+      </Date>
+      <test-file-stub />
+    </Content>
+  </Container>
+</Link>
 `;

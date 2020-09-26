@@ -1,6 +1,7 @@
 import { shallow } from "enzyme"
 
 import CalendarDay from "../../src/components/CalendarDay"
+import { Emotion } from "../../src/utils/emotions"
 
 describe("Calendar day: ", () => {
   it("blank day matches snapshot", () => {
@@ -16,7 +17,9 @@ describe("Calendar day: ", () => {
   })
 
   it("matches snapshot", () => {
-    const wrapper = shallow(<CalendarDay date={new Date(2000, 1, 1)} />)
+    const wrapper = shallow(
+      <CalendarDay date={new Date(2000, 1, 1)} emotion={Emotion.AMAZING} />
+    )
     expect(wrapper).toMatchSnapshot()
   })
 })
