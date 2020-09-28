@@ -51,6 +51,15 @@ it("Redirects to /me when no date is provided", () => {
     query: { date: null },
     push: mockPush,
   }))
-  const wrapper = mount(<Date />)
+  mount(<Date />)
   expect(mockPush).toHaveBeenCalledWith("/me")
+})
+
+it("does not redirect to /me when date is provided", () => {
+  const mockPush = jest.fn()
+  nextRouter.useRouter.mockImplementation(() => ({
+    query: { date: "01-01-2020" },
+  }))
+  mount(<Date />)
+  expect(mockPush).toHaveBeenCalledTimes(0)
 })
