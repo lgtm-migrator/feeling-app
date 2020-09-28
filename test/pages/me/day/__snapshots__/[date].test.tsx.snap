@@ -17,3 +17,5 @@ exports[`Me:  matches snapshot 1`] = `
 `;
 
 exports[`Me:  renders nothing when date is not provided 1`] = `""`;
+
+exports[`Renders nothing when date is not provided 1`] = `""`;
