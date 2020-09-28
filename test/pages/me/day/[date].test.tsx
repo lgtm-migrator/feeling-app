@@ -45,16 +45,6 @@ it("Renders nothing when date is not provided", () => {
   expect(wrapper).toMatchSnapshot()
 })
 
-it("Redirects to /me when no date is provided", () => {
-  const mockPush = jest.fn()
-  nextRouter.useRouter.mockImplementation(() => ({
-    query: { date: null },
-    push: mockPush,
-  }))
-  mount(<Date />)
-  expect(mockPush).toHaveBeenCalledWith("/me")
-})
-
 it("does not redirect to /me when date is provided", () => {
   const mockPush = jest.fn()
   nextRouter.useRouter.mockImplementation(() => ({
