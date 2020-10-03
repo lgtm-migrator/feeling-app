@@ -1,12 +1,9 @@
 import { shallow } from "enzyme"
-import { advanceTo } from "jest-date-mock"
 
 import * as Calendar from "../../src/components/Calendar"
 
 describe("Calendar: ", () => {
   it("matches snapshot", () => {
-    advanceTo(new Date(2021, 0, 1))
-
     const wrapper = shallow(<Calendar.default />)
     expect(wrapper).toMatchSnapshot()
   })
