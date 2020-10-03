@@ -4,7 +4,7 @@ exports[`Calendar:  calendar list matches snapshot 1`] = `
 <List
   direction="ltr"
   height={800}
-  itemCount={20}
+  itemCount={22}
   itemSize={[Function]}
   layout="vertical"
   overscanCount={3}
