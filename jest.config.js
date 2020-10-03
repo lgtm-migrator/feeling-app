@@ -15,6 +15,7 @@ module.exports = {
     "\\.(gif|ttf|eot|svg.*|png.*)$": "<rootDir>/test/__mocks__/fileMock.js",
   },
   setupFilesAfterEnv: ["<rootDir>/setupTests.js"],
+  setupFiles: ["jest-date-mock"],
   snapshotSerializers: ["enzyme-to-json/serializer"],
   collectCoverageFrom: ["src/**/*.{ts,tsx}"],
 }
