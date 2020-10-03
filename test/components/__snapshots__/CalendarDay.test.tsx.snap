@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calendar day:  blank day matches snapshot 1`] = `
+<Container
+  as="div"
+>
+  <Background
+    backgroundColor="transparent"
+  />
+</Container>
+`;
+
+exports[`Calendar day:  greyed out day matches snapshot 1`] = `
+<Container
+  as="div"
+>
+  <Background
+    isToday={false}
+  />
+</Container>
+`;
+
+exports[`Calendar day:  matches snapshot 1`] = `
+<Link
+  as="/me/day/01-02-2000"
+  href="/me/day/[date]"
+  passHref={true}
+>
+  <Container
+    aria-label="2nd February 2000"
+  >
+    <Background
+      backgroundColor="var(--red-color)"
+      isToday={false}
+    />
+    <Content>
+      <Date>
+        1
+      </Date>
+      <test-file-stub />
+    </Content>
+  </Container>
+</Link>
+`;

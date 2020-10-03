@@ -3,7 +3,7 @@ import Me from "../../../src/pages/me"
 
 describe("Me: ", () => {
   it("matches snapshot", () => {
-    const wrapper = shallow(<Me/>)
+    const wrapper = shallow(<Me />)
     expect(wrapper).toMatchSnapshot()
   })
 })

@@ -7,16 +7,16 @@ nextRouter.useRouter = jest.fn()
 
 describe("Tab Bar: ", () => {
   afterEach(() => {
-    jest.clearAllMocks();
-  });
+    jest.clearAllMocks()
+  })
 
-  each(['/me','/insights']).it('matches tab bar snapshot in %s', path => {
+  each(["/me", "/insights"]).it("matches tab bar snapshot in %s", (path) => {
     nextRouter.useRouter.mockImplementation(() => ({ pathname: path }))
-    const wrapper = shallow(<TabBar/>)
+    const wrapper = shallow(<TabBar />)
     expect(wrapper).toMatchSnapshot()
   })
 
-  each([true, false]).it('matches tab snapshot when active=%s', isActive => {
+  each([true, false]).it("matches tab snapshot when active=%s", (isActive) => {
     const wrapper = shallow(<Tab active={isActive} />)
     expect(wrapper).toMatchSnapshot()
   })

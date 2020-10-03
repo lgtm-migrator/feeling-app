@@ -4,7 +4,7 @@ import ComponentStub from "../__mocks__/ComponentStub"
 import Router from "next/router"
 
 jest.mock("next/router", () => ({
-  back: jest.fn()
+  back: jest.fn(),
 }))
 
 describe("Top Bar: ", () => {
@@ -26,7 +26,7 @@ describe("Top Bar: ", () => {
   })
 
   it("clicking back icon causes router to go back", () => {
-    const wrapper = shallow(<TopBar backButton={true}/>)
+    const wrapper = shallow(<TopBar backButton={true} />)
 
     wrapper.find("[data-test='top-bar-back-icon']").simulate("click")
     expect(Router.back).toBeCalledTimes(1)

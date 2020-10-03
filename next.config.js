@@ -35,6 +35,11 @@ module.exports = withPlugins(
           destination: "/me",
           permanent: false,
         },
+        {
+          source: "/day",
+          destination: "/me",
+          permanent: false,
+        },
       ]
     },
   }

@@ -9,6 +9,10 @@ const Container = styled.div`
   padding: var(--space-s) var(--space-m);
   display: flex;
   user-select: none;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--background-color);
 `
 
 const Content = styled.div`
@@ -43,6 +47,7 @@ const BackIconLink = styled.a`
   margin-right: var(--space-s);
   width: 32px;
   height: 32px;
+  cursor: pointer;
 `
 
 const IconLink = styled.a`
