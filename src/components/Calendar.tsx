@@ -49,7 +49,7 @@ export function CalendarList({
 
   return (
     <VariableSizeList
-      itemCount={getIndexFromDate(MAX_DATE)}
+      itemCount={getIndexFromDate(MAX_DATE) + 1}
       itemSize={calculateMonthHeight}
       height={height}
       width={width}
