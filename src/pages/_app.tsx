@@ -6,8 +6,9 @@ import TabBar from "../components/TabBar"
 import "../styles/global.css"
 
 const Main = styled.main`
-  /* Account for page  */
-  margin-bottom: calc(12.4rem + var(--space-m));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 `
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {

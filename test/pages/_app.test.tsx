@@ -15,14 +15,14 @@ describe("App: ", () => {
   it("matches snapshot when on landing page", () => {
     Utils.getDisplayName.mockImplementation(() => "Landing")
 
-    const wrapper = shallow(<MyApp Component={ComponentStub}/>)
+    const wrapper = shallow(<MyApp Component={ComponentStub} />)
     expect(wrapper).toMatchSnapshot()
   })
 
   it("matches snapshot when on App", () => {
     Utils.getDisplayName.mockImplementation(() => "App")
 
-    const wrapper = shallow(<MyApp Component={ComponentStub}/>)
+    const wrapper = shallow(<MyApp Component={ComponentStub} />)
     expect(wrapper).toMatchSnapshot()
   })
 })
