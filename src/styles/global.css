@@ -6,8 +6,8 @@
   --blue-color: #caeaf8;
   --purple-color: #e4d0f2;
   --green-color: #cef8ca;
-  --grey-color: #8b8b8b;
-  --light-grey-color: #ececec;
+  --grey-color: #757575;
+  --light-grey-color: #eaeaea;
 
   --space-xxxs: 4px;
   --space-xxs: 8px;
@@ -18,6 +18,9 @@
   --space-xl: 40px;
 
   --border-radius: 12px;
+
+  /* Generated after tab bar is rendered */
+  --tab-bar-height: 0px;
 }
 
 html,

@@ -1,8 +1,10 @@
 import Head from "next/head"
 import { styled } from "linaria/react"
-import FeelingLogo from "../../assets/icons/logo.svg"
-import TwitterSvg from "../../assets/icons/twitter.svg"
-import EmailSvg from "../../assets/icons/email.svg"
+
+import FeelingLogo from "../../assets/icons/logo.svg?sprite"
+import TwitterSvg from "../../assets/icons/twitter.svg?sprite"
+import EmailSvg from "../../assets/icons/email.svg?sprite"
+import IPhone from "../../../public/iphone_crop.png?resize&sizes[]=300&sizes[]=500&sizes[]=850&img"
 
 const HeaderContainer = styled.header`
   height: var(--header-height);
@@ -189,7 +191,6 @@ const PhoneImage = styled.img`
     width: calc(var(--grid-width) / 2);
   }
 `
-
 export function Header() {
   return (
     <HeaderContainer>
@@ -199,11 +200,12 @@ export function Header() {
           href="https://twitter.com/feelingapp"
           target="_blank"
           rel="noreferrer noopener"
+          aria-label="Twitter"
         >
           <TwitterSvg />
           <LinkText>Twitter</LinkText>
         </Link>
-        <Link href="mailto:hello@feeling.to">
+        <Link href="mailto:hello@feeling.to" aria-label="Contact us">
           <EmailSvg />
           <LinkText>Contact</LinkText>
         </Link>
@@ -217,7 +219,7 @@ export function Main() {
     <MainContainer>
       <Title>Your feelings are about to get a whole lot smarter 😊</Title>
       <Input>
-        <EmailInput type="text" placeholder="Your email" />
+        <EmailInput type="text" placeholder="Your email" aria-label="Email" />
         <EarlyAccessButton>Get Early Access</EarlyAccessButton>
       </Input>
 
@@ -232,7 +234,7 @@ export function Main() {
       </Description>
 
       <picture>
-        <PhoneImage src="/iphone_crop.png" alt="iPhone" />
+        <PhoneImage src={IPhone.src} srcSet={IPhone.srcSet} alt="iPhone" />
       </picture>
     </MainContainer>
   )

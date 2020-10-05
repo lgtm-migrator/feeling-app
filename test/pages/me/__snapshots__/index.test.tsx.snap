@@ -12,10 +12,14 @@ exports[`Me:  matches snapshot 1`] = `
       Object {
         "href": "/settings",
         "icon": <test-file-stub />,
+        "label": "Settings",
       }
     }
     subtitle="How are you feeling today?"
     title="Hey Michael,"
   />
+  <Container>
+    <Calendar />
+  </Container>
 </Fragment>
 `;

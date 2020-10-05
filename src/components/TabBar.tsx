@@ -1,10 +1,11 @@
 import Link from "next/link"
+import { useLayoutEffect, useRef } from "react"
 import { styled } from "linaria/react"
 import { useRouter } from "next/router"
 
-import MeIcon from "../assets/icons/me.svg"
-import InsightsIcon from "../assets/icons/insights.svg"
-import UpsetEmoji from "../assets/emojis/upset.svg"
+import MeIcon from "../assets/icons/me.svg?sprite"
+import InsightsIcon from "../assets/icons/insights.svg?sprite"
+import UpsetEmoji from "../assets/emojis/upset.svg?sprite"
 
 const Container = styled.nav`
   width: 100%;
@@ -70,18 +71,31 @@ const FloatingActionButton = styled.div`
 
 export default function TabBar(): JSX.Element {
   const { pathname } = useRouter()
+  const tabBarRef = useRef<HTMLElement>()
+
+  useLayoutEffect(() => {
+    if (tabBarRef.current) {
+      document.documentElement.style.setProperty(
+        "--tab-bar-height",
+        tabBarRef.current.clientHeight + "px"
+      )
+    }
+  }, [tabBarRef.current])
 
   return (
-    <Container>
+    <Container ref={tabBarRef}>
       <Link href="/me" passHref>
-        <Tab active={pathname === "/me"} style={{ gridArea: "tab-1" }}>
+        <Tab active={pathname.startsWith("/me")} style={{ gridArea: "tab-1" }}>
           <MeIcon />
           <TabLabel>Me</TabLabel>
         </Tab>
       </Link>
 
       <Link href="/insights" passHref>
-        <Tab active={pathname === "/insights"} style={{ gridArea: "tab-2" }}>
+        <Tab
+          active={pathname.startsWith("/insights")}
+          style={{ gridArea: "tab-2" }}
+        >
           <InsightsIcon />
           <TabLabel>Insights</TabLabel>
         </Tab>
