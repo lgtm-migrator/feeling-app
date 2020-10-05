@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Setting:  matches snapshot 1`] = `
-<a
+<Container
+  as="a"
   href="/"
 >
   <Title>
@@ -10,34 +11,39 @@ exports[`Setting:  matches snapshot 1`] = `
   <Subtitle>
     dolor sit amet
   </Subtitle>
-</a>
+</Container>
 `;
 
 exports[`Setting:  matches snapshot without href 1`] = `
-<a>
+<Container
+  as="div"
+>
   <Title>
     Lorem ipsum
   </Title>
   <Subtitle>
     dolor sit amet
   </Subtitle>
-</a>
+</Container>
 `;
 
 exports[`Setting:  matches snapshot without subtitle 1`] = `
-<a
+<Container
+  as="a"
   href="/"
 >
   <Title>
     Lorem ipsum
   </Title>
-</a>
+</Container>
 `;
 
 exports[`Setting:  matches snapshot without subtitle and href 1`] = `
-<a>
+<Container
+  as="div"
+>
   <Title>
     Lorem ipsum
   </Title>
-</a>
+</Container>
 `;

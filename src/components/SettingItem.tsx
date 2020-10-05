@@ -1,5 +1,7 @@
 import { styled } from "linaria/react"
 
+const Container = styled.a``
+
 const Title = styled.div`
   font-size: 1.8rem;
   font-weight: 500;
@@ -21,9 +23,9 @@ export default function SettingItem(props: Props): JSX.Element {
   const { title, subtitle, href } = props
 
   return (
-    <a href={href}>
+    <Container as={href ? "a" : "div"} href={href}>
       <Title>{title}</Title>
       {subtitle && <Subtitle>{subtitle}</Subtitle>}
-    </a>
+    </Container>
   )
 }
