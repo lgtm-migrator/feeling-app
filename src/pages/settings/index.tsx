@@ -1,6 +1,7 @@
 import Head from "next/head"
 import { styled } from "linaria/react"
 
+import { version } from "../../../package.json"
 import TopBar from "../../components/TopBar"
 import SettingItem from "../../components/SettingItem"
 
@@ -46,7 +47,7 @@ export default function Settings(): JSX.Element {
         <SettingItem title="Terms and Conditions" href="" />
         <SettingItem title="Privacy Policy" href="" />
         <Separator />
-        <SettingItem title="Version" subtitle="1.0" />
+        <SettingItem title="Version" subtitle={version} />
         <SettingItem
           title="Sign Out"
           subtitle="You are signed in as Michael Lee"

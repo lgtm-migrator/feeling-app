@@ -33,7 +33,7 @@ exports[`Settings:  matches snapshot 1`] = `
     />
     <Separator />
     <SettingItem
-      subtitle="1.0"
+      subtitle="0.1.0"
       title="Version"
     />
     <SettingItem
